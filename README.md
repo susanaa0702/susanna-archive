@@ -80,8 +80,8 @@ Pretendard는 구글폰트에 없어서 외부 CDN이 필요합니다. 그래서
 
 | 갈래 | 랜딩 카드 | 목록 페이지 제목 | 페이지 위 영문 라벨 | 폴더 |
 |---|---|---|---|---|
-| 인사이트 | Insights | 인사이트 | INSIGHTS | `insight/` |
-| 과제 | Works | 과제 | WORKS | `assignment/` |
+| 인사이트 | Insight | 인사이트 | INSIGHT | `insight/` |
+| 과제 | Assignment | 과제 | ASSIGNMENT | `assignment/` |
 | 약사의 자리 | Counsel | 약사의 자리 | COUNSEL | `counsel/` |
 
 첫 화면은 영문 이름으로 단정하게 두고, 안으로 들어가면 한국어로 읽습니다. 새 갈래를 더할 때도 이 규칙을 따릅니다.
