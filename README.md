@@ -26,7 +26,6 @@ susanna-archive/
 ├─ favicon-32.png             탭 아이콘
 ├─ favicon-180.png            애플 터치 아이콘
 ├─ .nojekyll
-├─ .github/workflows/deploy.yml
 └─ README.md
 ```
 
@@ -138,10 +137,12 @@ Pretendard는 구글폰트에 없어서 외부 CDN이 필요합니다. 그래서
 
 ## 배포
 
-`main`에 push하면 GitHub Actions가 자동으로 배포합니다 (`.github/workflows/deploy.yml`).
-
-처음 한 번은 저장소 **Settings → Pages → Source**를 **GitHub Actions**로 바꿔야 첫 배포가 돕니다.
+`main`에 push하면 GitHub Pages가 자동으로 다시 배포합니다.
 
 ```bash
 git add -A && git commit -m "새 인사이트 추가" && git push
 ```
+
+설정은 **Settings → Pages → Source: Deploy from a branch → main / (root)** 입니다.
+
+GitHub Actions 워크플로(`.github/workflows/deploy.yml`) 방식도 되지만, 그 파일을 로컬에서 push하려면 깃허브 토큰에 `workflow` 권한이 있어야 합니다. 2026-08-07 기준 이 컴퓨터의 토큰에는 그 권한이 없어서 브랜치 배포 방식을 씁니다. 나중에 바꾸려면 터미널에서 `gh auth refresh -h github.com -s workflow` 로 권한을 더하면 됩니다.
