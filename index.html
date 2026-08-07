@@ -16,6 +16,8 @@
   --bg:#F6F4EC;
   --accent:#2F5D50;
   --accent-2:#44637F;
+  --accent-3:#A85B2C;
+  --icon-insight:#3F7D2F;
   --point:#C2703D;
   --point-ink:#A85B2C;
   --ink:#2B2A26;
@@ -42,7 +44,7 @@ body{
   padding:3rem 1.25rem 2rem;
   text-align:center;
 }
-.wrap{width:100%;max-width:660px}
+.wrap{width:100%;max-width:880px}
 .eyebrow{
   font-family:var(--font-caption);
   font-size:.72rem;
@@ -99,8 +101,12 @@ h1{
   margin:0 auto .95rem;
   display:flex;align-items:center;justify-content:center;
 }
-.card-insight .icon{background:rgba(47,93,80,.10)}
+.card-insight .icon{background:rgba(63,125,47,.12)}
 .card-assignment .icon{background:rgba(68,99,127,.10)}
+.card-counsel .icon{background:rgba(168,91,44,.10)}
+.card-insight .icon svg{stroke:var(--icon-insight)}
+.card-assignment .icon svg{stroke:var(--accent-2)}
+.card-counsel .icon svg{stroke:var(--accent-3)}
 .card h2{
   font-family:var(--font-title);
   font-size:1.3rem;
@@ -109,6 +115,7 @@ h1{
 }
 .card-insight h2{color:var(--accent)}
 .card-assignment h2{color:var(--accent-2)}
+.card-counsel h2{color:var(--accent-3)}
 .card p{
   font-family:var(--font-caption);
   font-size:.85rem;
@@ -122,8 +129,19 @@ footer{
   color:var(--muted);
   letter-spacing:.02em;
 }
-@media (max-width:560px){
-  .cards{flex-direction:column}
+@media (max-width:720px){
+  .cards{flex-direction:column;gap:.75rem}
+  .card{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    text-align:left;
+    padding:1.05rem 1.15rem;
+  }
+  .icon{margin:0;flex:0 0 auto;width:46px;height:46px}
+  .card h2{font-size:1.15rem;margin-bottom:.15rem}
+  .card p{font-size:.8rem;line-height:1.5}
+  .card p br{display:none}
   .rule{margin:1.6rem auto 1.8rem}
   footer{margin-top:2.25rem}
 }
@@ -143,24 +161,45 @@ footer{
   <nav class="cards">
     <a class="card card-insight" href="insight/">
       <span class="icon" aria-hidden="true">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2F5D50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 20c0-6 3-11 9-13"/>
-          <path d="M18 5c1 6-2 11-7 11-2 0-3-1-3-3 0-4 5-7 10-8z"/>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3F7D2F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 21v-7.5"/>
+          <path d="M12 13.5c0-3.3 2.7-6 6-6 0 3.3-2.7 6-6 6z"/>
+          <path d="M12 16c0-2.8-2.2-5-5-5 0 2.8 2.2 5 5 5z"/>
         </svg>
       </span>
-      <h2>인사이트</h2>
-      <p>살롱에서 한 주를 지나며<br>보고 배운 것을 정리한 리포트</p>
+      <span>
+        <h2>인사이트</h2>
+        <p>살롱에서 한 주를 지나며<br>보고 배운 것을 정리한 리포트</p>
+      </span>
     </a>
 
     <a class="card card-assignment" href="assignment/">
       <span class="icon" aria-hidden="true">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#44637F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="4" y="4" width="12" height="12" rx="2"/>
-          <path d="M8 20h10a2 2 0 0 0 2-2V8"/>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#44637F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3 3 8l9 5 9-5-9-5z"/>
+          <path d="M3 13l9 5 9-5"/>
         </svg>
       </span>
-      <h2>과제</h2>
-      <p>살롱 과제로 실제로 만든<br>결과물과 그 방법</p>
+      <span>
+        <h2>과제</h2>
+        <p>살롱 과제로 실제로 만든<br>결과물과 그 방법</p>
+      </span>
+    </a>
+
+    <a class="card card-counsel" href="counsel/">
+      <span class="icon" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#A85B2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4.5 10.5h15"/>
+          <path d="M6 10.5a6 6 0 0 0 12 0"/>
+          <path d="M12 16.5V20"/>
+          <path d="M9 20h6"/>
+          <path d="M16.5 3.5 12 9.5"/>
+        </svg>
+      </span>
+      <span>
+        <h2>약사의 자리</h2>
+        <p>카운터에서 자주 받는 물음과<br>상담이라는 일에 대해</p>
+      </span>
     </a>
   </nav>
 

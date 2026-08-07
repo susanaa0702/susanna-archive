@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>약사의 자리 글 틀 — 수산나 아카이브</title>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F4EC;
+  --accent:#2F5D50;
+  --accent-2:#44637F;
+  --accent-3:#A85B2C;
+  --point:#C2703D;
+  --point-ink:#A85B2C;
+  --ink:#2B2A26;
+  --muted:#6B6A61;
+  --surface:#FFFFFF;
+  --line:rgba(43,42,38,.14);
+  --font-title:"Gowun Batang", serif;
+  --font-body:"Pretendard","Pretendard Variable","Noto Sans KR",-apple-system,BlinkMacSystemFont,sans-serif;
+  --font-caption:"Gowun Dodum","Noto Sans KR",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.8;
+  min-height:100vh;
+  padding:2.25rem 1.25rem 2.5rem;
+}
+.wrap{width:100%;max-width:680px;margin:0 auto}
+.back{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--muted);
+  text-decoration:none;
+  margin-bottom:2.5rem;
+  transition:color .18s ease;
+}
+.back:hover,.back:focus-visible{color:var(--accent-3);outline:none}
+.tag{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.72rem;
+  letter-spacing:.06em;
+  padding:.15rem .6rem;
+  border-radius:999px;
+  background:rgba(47,93,80,.10);
+  color:var(--accent);
+  margin-bottom:.6rem;
+}
+h1{
+  font-family:var(--font-title);
+  font-size:clamp(1.75rem,5.6vw,2.25rem);
+  font-weight:700;
+  line-height:1.4;
+  margin-bottom:.75rem;
+}
+.summary{
+  font-family:var(--font-title);
+  font-size:1.02rem;
+  color:var(--accent-3);
+  padding-bottom:2rem;
+  border-bottom:1px solid var(--line);
+  margin-bottom:2.5rem;
+}
+h2{
+  font-family:var(--font-title);
+  font-size:1.3rem;
+  font-weight:700;
+  margin:2.75rem 0 1rem;
+  padding-left:.7rem;
+  border-left:4px solid var(--accent-3);
+}
+h3{
+  font-family:var(--font-body);
+  font-size:1rem;
+  font-weight:700;
+  margin:1.75rem 0 .4rem;
+}
+p{margin-bottom:1rem}
+ul.plain{list-style:none}
+ul.plain li{padding:.6rem 0 .6rem 1.1rem;border-bottom:1px solid var(--line);font-size:.94rem;position:relative}
+ul.plain li:last-child{border-bottom:none}
+ul.plain li::before{content:"·";position:absolute;left:.2rem;color:var(--accent-3)}
+.qa{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:1.2rem 1.3rem;
+  margin-bottom:.85rem;
+}
+.qa h3{margin:0 0 .35rem}
+.qa p{font-size:.92rem;color:var(--muted);margin-bottom:0}
+.notice{
+  font-family:var(--font-caption);
+  font-size:.82rem;
+  color:var(--muted);
+  background:rgba(168,91,44,.07);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-top:2.5rem;
+}
+.note{
+  font-family:var(--font-caption);
+  font-size:.8rem;
+  color:var(--muted);
+  background:rgba(194,112,61,.08);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-bottom:2rem;
+}
+footer{
+  margin-top:3rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--font-caption);
+  font-size:.75rem;
+  color:var(--muted);
+  text-align:center;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="./">← 약사의 자리</a>
+
+  <p class="note">이 페이지는 <strong>틀</strong>입니다. 복사해서 <code>YYMMDD-키워드.html</code>로 저장한 뒤 내용을 채우고, 이 안내 상자는 지우세요.<br>
+  태그가 <strong>상담</strong>인 글이면 위 <code>class="tag"</code> 색을 <code>rgba(168,91,44,.12)</code> / <code>var(--accent-3)</code>로 바꾸세요.</p>
+
+  <p class="tag">일반 자료</p>
+  <h1>여기에 제목</h1>
+  <p class="summary">한 줄 설명 — 이 글이 어떤 물음에 답하는지.</p>
+
+  <h2>어떤 물음인가</h2>
+  <p>카운터에서 자주 받는 물음을 그대로 적습니다. 특정한 누구의 사연이 아니라, 여러 번 반복해 들은 일반적인 물음으로 적습니다.</p>
+
+  <h2>정리</h2>
+  <div class="qa">
+    <h3>소제목</h3>
+    <p>일반적인 정보를 한두 문단으로.</p>
+  </div>
+  <div class="qa">
+    <h3>소제목</h3>
+    <p>일반적인 정보를 한두 문단으로.</p>
+  </div>
+
+  <h2>이럴 땐 병원으로</h2>
+  <ul class="plain">
+    <li>스스로 판단하지 말고 진료를 받아야 하는 경우</li>
+    <li>같은 증상이 오래 이어질 때</li>
+  </ul>
+
+  <h2>참고한 것</h2>
+  <ul class="plain">
+    <li>자료 이름 · 출처</li>
+  </ul>
+
+  <p class="notice">이 글은 일반적인 정보입니다. 개별 상담이나 진료를 대신하지 않습니다. 복용 중인 약이 있거나 증상이 이어지면 약사·의사와 직접 상의하세요.</p>
+
+  <footer>글짓는 약사 수산나 · 디퍼 언브랜딩 살롱 아카이브</footer>
+</div>
+</body>
+</html>
