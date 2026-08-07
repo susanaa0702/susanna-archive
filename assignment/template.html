@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>과제 페이지 틀 — 수산나 아카이브</title>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F4EC;
+  --accent:#2F5D50;
+  --accent-2:#44637F;
+  --point:#C2703D;
+  --point-ink:#A85B2C;
+  --ink:#2B2A26;
+  --muted:#6B6A61;
+  --surface:#FFFFFF;
+  --line:rgba(43,42,38,.14);
+  --font-title:"Gowun Batang", serif;
+  --font-body:"Pretendard","Pretendard Variable","Noto Sans KR",-apple-system,BlinkMacSystemFont,sans-serif;
+  --font-caption:"Gowun Dodum","Noto Sans KR",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.8;
+  min-height:100vh;
+  padding:2.25rem 1.25rem 2.5rem;
+}
+.wrap{width:100%;max-width:680px;margin:0 auto}
+.back{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--muted);
+  text-decoration:none;
+  margin-bottom:2.5rem;
+  transition:color .18s ease;
+}
+.back:hover,.back:focus-visible{color:var(--accent-2);outline:none}
+.tag{
+  font-family:var(--font-caption);
+  font-size:.74rem;
+  letter-spacing:.1em;
+  color:var(--point-ink);
+  margin-bottom:.5rem;
+}
+h1{
+  font-family:var(--font-title);
+  font-size:clamp(1.75rem,5.6vw,2.25rem);
+  font-weight:700;
+  line-height:1.4;
+  margin-bottom:.75rem;
+}
+.summary{
+  font-family:var(--font-title);
+  font-size:1.02rem;
+  color:var(--accent-2);
+  padding-bottom:2rem;
+  border-bottom:1px solid var(--line);
+  margin-bottom:2.5rem;
+}
+h2{
+  font-family:var(--font-title);
+  font-size:1.3rem;
+  font-weight:700;
+  margin:2.75rem 0 1rem;
+  padding-left:.7rem;
+  border-left:4px solid var(--accent-2);
+}
+p{margin-bottom:1rem}
+ul.plain{list-style:none}
+ul.plain li{padding:.6rem 0;border-bottom:1px solid var(--line);font-size:.92rem}
+ul.plain li:last-child{border-bottom:none}
+figure{margin:1.25rem 0}
+figure img{width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+figcaption{font-family:var(--font-caption);font-size:.78rem;color:var(--muted);margin-top:.5rem}
+.prompt{
+  background:rgba(43,42,38,.045);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:1rem 1.1rem;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:.83rem;
+  line-height:1.7;
+  white-space:pre-wrap;
+  word-break:break-word;
+  overflow-x:auto;
+  margin-bottom:1rem;
+}
+.cta{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--accent-2);
+  text-decoration:none;
+  border:1px solid rgba(68,99,127,.4);
+  border-radius:999px;
+  padding:.5rem 1.1rem;
+  transition:background .18s ease;
+}
+.cta:hover,.cta:focus-visible{background:rgba(68,99,127,.08);outline:none}
+.note{
+  font-family:var(--font-caption);
+  font-size:.8rem;
+  color:var(--muted);
+  background:rgba(194,112,61,.08);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-bottom:2rem;
+}
+footer{
+  margin-top:4rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--font-caption);
+  font-size:.75rem;
+  color:var(--muted);
+  text-align:center;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="./">← 과제</a>
+
+  <p class="note">이 페이지는 <strong>틀</strong>입니다. 복사해서 <code>YYMMDD-이름.html</code>로 저장한 뒤 내용을 채우고, 이 안내 상자는 지우세요.</p>
+
+  <p class="tag">태그</p>
+  <h1>여기에 과제 제목</h1>
+  <p class="summary">한 줄 설명 — 무엇을 만들었는지.</p>
+
+  <h2>결과물</h2>
+  <figure>
+    <img src="../assets/example.png" alt="결과물 화면">
+    <figcaption>화면 설명.</figcaption>
+  </figure>
+  <p><a class="cta" href="https://example.com" target="_blank" rel="noopener noreferrer">직접 보기 ↗</a></p>
+
+  <h2>만든 방법</h2>
+  <ul class="plain">
+    <li>쓴 도구 —</li>
+    <li>걸린 시간 —</li>
+    <li>순서 —</li>
+  </ul>
+
+  <div class="prompt">여기에 실제로 쓴 프롬프트를 그대로 붙여넣습니다.</div>
+
+  <footer>글짓는 약사 수산나 · 디퍼 언브랜딩 살롱 아카이브</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>인사이트 리포트 틀 — 수산나 아카이브</title>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F4EC;
+  --accent:#2F5D50;
+  --accent-2:#44637F;
+  --point:#C2703D;
+  --point-ink:#A85B2C;
+  --ink:#2B2A26;
+  --muted:#6B6A61;
+  --surface:#FFFFFF;
+  --line:rgba(43,42,38,.14);
+  --font-title:"Gowun Batang", serif;
+  --font-body:"Pretendard","Pretendard Variable","Noto Sans KR",-apple-system,BlinkMacSystemFont,sans-serif;
+  --font-caption:"Gowun Dodum","Noto Sans KR",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.8;
+  min-height:100vh;
+  padding:2.25rem 1.25rem 2.5rem;
+}
+.wrap{width:100%;max-width:680px;margin:0 auto}
+.back{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--muted);
+  text-decoration:none;
+  margin-bottom:2.5rem;
+  transition:color .18s ease;
+}
+.back:hover,.back:focus-visible{color:var(--accent);outline:none}
+.date{
+  font-family:var(--font-caption);
+  font-size:.76rem;
+  letter-spacing:.08em;
+  color:var(--point-ink);
+  margin-bottom:.5rem;
+}
+h1{
+  font-family:var(--font-title);
+  font-size:clamp(1.75rem,5.6vw,2.25rem);
+  font-weight:700;
+  line-height:1.4;
+  margin-bottom:.75rem;
+}
+.summary{
+  font-family:var(--font-title);
+  font-size:1.02rem;
+  color:var(--accent);
+  padding-bottom:2rem;
+  border-bottom:1px solid var(--line);
+  margin-bottom:2.5rem;
+}
+h2{
+  font-family:var(--font-title);
+  font-size:1.3rem;
+  font-weight:700;
+  margin:2.75rem 0 1rem;
+  padding-left:.7rem;
+  border-left:4px solid var(--accent);
+}
+h3{
+  font-family:var(--font-body);
+  font-size:1rem;
+  font-weight:700;
+  margin:1.75rem 0 .4rem;
+}
+p{margin-bottom:1rem}
+.made{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-top:3px solid var(--point);
+  border-radius:12px;
+  padding:1.35rem 1.4rem;
+  margin-bottom:1rem;
+}
+.made h3{margin-top:0}
+.made p{font-size:.92rem;color:var(--muted);margin-bottom:.75rem}
+.made a{color:var(--accent-2);font-size:.88rem;font-family:var(--font-caption);text-decoration:none;border-bottom:1px solid rgba(68,99,127,.35)}
+.made a:hover,.made a:focus-visible{border-bottom-color:var(--accent-2);outline:none}
+figure{margin:1.25rem 0}
+figure img{width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+figcaption{font-family:var(--font-caption);font-size:.78rem;color:var(--muted);margin-top:.5rem}
+.prompt{
+  background:rgba(43,42,38,.045);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:1rem 1.1rem;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:.83rem;
+  line-height:1.7;
+  color:var(--ink);
+  white-space:pre-wrap;
+  word-break:break-word;
+  overflow-x:auto;
+  margin-bottom:1rem;
+}
+.reflect{list-style:none;margin-top:.5rem}
+.reflect li{
+  padding:.85rem 0;
+  border-bottom:1px solid var(--line);
+}
+.reflect li:last-child{border-bottom:none}
+.reflect strong{display:block;font-family:var(--font-title);font-size:1.02rem;margin-bottom:.15rem}
+.reflect span{font-size:.9rem;color:var(--muted)}
+.agent{
+  background:rgba(47,93,80,.06);
+  border-radius:12px;
+  padding:1.35rem 1.4rem;
+  margin-top:1rem;
+}
+.agent p{font-size:.92rem;margin-bottom:.75rem}
+.agent p:last-child{margin-bottom:0}
+.agent .who{
+  font-family:var(--font-caption);
+  font-size:.74rem;
+  letter-spacing:.1em;
+  color:var(--accent);
+  margin-bottom:.6rem;
+}
+.note{
+  font-family:var(--font-caption);
+  font-size:.8rem;
+  color:var(--muted);
+  background:rgba(194,112,61,.08);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-bottom:2rem;
+}
+footer{
+  margin-top:4rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--font-caption);
+  font-size:.75rem;
+  color:var(--muted);
+  text-align:center;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="./">← 인사이트</a>
+
+  <p class="note">이 페이지는 <strong>틀</strong>입니다. 복사해서 <code>YYMMDD.html</code>로 저장한 뒤 내용을 채우고, 이 안내 상자는 지우세요.</p>
+
+  <p class="date">2026.00.00 – 00.00</p>
+  <h1>여기에 리포트 제목</h1>
+  <p class="summary">한 줄 요약 — 이번 주에 무엇을 만들었는지 한 문장으로.</p>
+
+  <h2>만든 것</h2>
+  <p>이번 주에 실제로 만든 것을 먼저 보여줍니다. 눌러볼 수 있게 링크를 걸고, 화면이 있으면 이미지를 넣습니다.</p>
+
+  <div class="made">
+    <h3>결과물 이름</h3>
+    <p>무엇인지 한두 줄로.</p>
+    <a href="https://example.com" target="_blank" rel="noopener noreferrer">직접 보기 ↗</a>
+  </div>
+
+  <figure>
+    <img src="../assets/example.png" alt="결과물 화면">
+    <figcaption>화면 설명.</figcaption>
+  </figure>
+
+  <h2>어떻게 만들었나</h2>
+  <p>쓴 도구와 순서를 적습니다. 프롬프트를 그대로 싣는 것이 이 리포트의 중심입니다.</p>
+
+  <div class="prompt">여기에 실제로 쓴 프롬프트를 그대로 붙여넣습니다.
+줄바꿈은 그대로 유지됩니다.</div>
+
+  <h2>배운 것</h2>
+  <ul class="reflect">
+    <li>
+      <strong>짧은 제목</strong>
+      <span>한두 줄. 실제로 겪은 것만. 긴 문단으로 풀지 않습니다.</span>
+    </li>
+    <li>
+      <strong>짧은 제목</strong>
+      <span>한두 줄.</span>
+    </li>
+  </ul>
+
+  <h2>에이전트의 기록</h2>
+  <div class="agent">
+    <p class="who">사막여우 (AI 에이전트)</p>
+    <p>여기부터는 에이전트가 자기 목소리로 씁니다 — 무엇을 근거로 판단했고, 어디서 막혔고, 어떻게 풀었는지.</p>
+    <p>사용자의 성찰과 섞지 않고 이 칸에만 둡니다.</p>
+  </div>
+
+  <footer>글짓는 약사 수산나 · 디퍼 언브랜딩 살롱 아카이브</footer>
+</div>
+</body>
+</html>

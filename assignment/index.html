@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>과제 — 수산나 아카이브</title>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F4EC;
+  --accent:#2F5D50;
+  --accent-2:#44637F;
+  --point:#C2703D;
+  --point-ink:#A85B2C;
+  --ink:#2B2A26;
+  --muted:#6B6A61;
+  --surface:#FFFFFF;
+  --line:rgba(43,42,38,.14);
+  --font-title:"Gowun Batang", serif;
+  --font-body:"Pretendard","Pretendard Variable","Noto Sans KR",-apple-system,BlinkMacSystemFont,sans-serif;
+  --font-caption:"Gowun Dodum","Noto Sans KR",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.7;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  padding:2.25rem 1.25rem 2.5rem;
+}
+.wrap{width:100%;max-width:860px;margin:0 auto;flex:1}
+.back{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--muted);
+  text-decoration:none;
+  margin-bottom:2.5rem;
+  transition:color .18s ease;
+}
+.back:hover,.back:focus-visible{color:var(--accent-2);outline:none}
+.eyebrow{
+  font-family:var(--font-caption);
+  font-size:.7rem;
+  letter-spacing:.22em;
+  color:var(--accent-2);
+  margin-bottom:.6rem;
+}
+h1{
+  font-family:var(--font-title);
+  font-size:clamp(1.9rem,6vw,2.4rem);
+  font-weight:700;
+  margin-bottom:.6rem;
+}
+.lead{
+  font-family:var(--font-caption);
+  font-size:.9rem;
+  color:var(--muted);
+  max-width:46ch;
+  margin-bottom:2.75rem;
+}
+.grid{
+  list-style:none;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:1rem;
+}
+.grid li.featured{grid-column:1/-1}
+.card{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-top:3px solid var(--accent-2);
+  border-radius:12px;
+  padding:1.25rem 1.3rem 1.35rem;
+  text-decoration:none;
+  color:inherit;
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.card:hover,.card:focus-visible{
+  transform:translateY(-4px);
+  box-shadow:0 10px 24px rgba(43,42,38,.10);
+  border-color:rgba(43,42,38,.22);
+  border-top-color:var(--accent-2);
+  outline:none;
+}
+.tag{
+  font-family:var(--font-caption);
+  font-size:.7rem;
+  letter-spacing:.1em;
+  color:var(--point-ink);
+  margin-bottom:.5rem;
+}
+.card h2{
+  font-family:var(--font-title);
+  font-size:1.12rem;
+  font-weight:700;
+  margin-bottom:.4rem;
+}
+.featured .card h2{font-size:1.35rem}
+.card p{font-size:.86rem;color:var(--muted);line-height:1.6}
+.out{
+  font-family:var(--font-caption);
+  font-size:.74rem;
+  color:var(--accent-2);
+  margin-top:.9rem;
+}
+.empty{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  min-height:132px;
+  justify-content:center;
+  border:1px dashed rgba(43,42,38,.28);
+  border-radius:12px;
+  padding:1.25rem 1.3rem;
+  text-decoration:none;
+  color:inherit;
+  transition:border-color .18s ease, background .18s ease;
+}
+.empty:hover,.empty:focus-visible{
+  border-color:var(--accent-2);
+  background:rgba(68,99,127,.04);
+  outline:none;
+}
+.empty h2{
+  font-family:var(--font-title);
+  font-size:1rem;
+  font-weight:400;
+  color:var(--muted);
+  margin-bottom:.3rem;
+}
+.empty p{font-family:var(--font-caption);font-size:.8rem;color:var(--muted)}
+footer{
+  margin-top:4rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--font-caption);
+  font-size:.75rem;
+  color:var(--muted);
+  text-align:center;
+}
+@media (prefers-reduced-motion:reduce){
+  .card{transition:none}
+  .card:hover,.card:focus-visible{transform:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../">← 수산나</a>
+
+  <p class="eyebrow">ASSIGNMENT</p>
+  <h1>과제</h1>
+  <p class="lead">살롱 과제로 실제로 만든 것들. 눌러서 결과물을 직접 볼 수 있습니다.</p>
+
+  <ul class="grid">
+
+    <li class="featured">
+      <a class="card" href="https://m.blog.naver.com/susanaa" target="_blank" rel="noopener noreferrer">
+        <span class="tag">블로그</span>
+        <h2>글짓는 약사 수산나</h2>
+        <p>약국에서 만난 사람들과 읽은 책에 대해 꾸준히 써온 곳. 아카이브 이전의 기록이 여기 쌓여 있습니다.</p>
+        <span class="out">네이버 블로그에서 열기 ↗</span>
+      </a>
+    </li>
+
+    <!-- 새 과제는 이 위·아래에 <li> 하나씩 쌓습니다.
+    <li>
+      <a class="card" href="260811-이름.html">
+        <span class="tag">태그</span>
+        <h2>여기에 제목</h2>
+        <p>여기에 한 줄 설명.</p>
+      </a>
+    </li>
+    -->
+
+    <li>
+      <a class="empty" href="template.html">
+        <h2>다음 과제 자리</h2>
+        <p>눌러보면 과제 페이지 틀이 열립니다.</p>
+      </a>
+    </li>
+
+    <li>
+      <span class="empty" aria-hidden="true">
+        <h2>비어 있음</h2>
+        <p>자라는 아카이브입니다.</p>
+      </span>
+    </li>
+
+  </ul>
+
+  <footer>글짓는 약사 수산나 · 디퍼 언브랜딩 살롱 아카이브</footer>
+</div>
+</body>
+</html>

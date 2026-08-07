@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>인사이트 — 수산나 아카이브</title>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F4EC;
+  --accent:#2F5D50;
+  --accent-2:#44637F;
+  --point:#C2703D;
+  --point-ink:#A85B2C;
+  --ink:#2B2A26;
+  --muted:#6B6A61;
+  --surface:#FFFFFF;
+  --line:rgba(43,42,38,.14);
+  --font-title:"Gowun Batang", serif;
+  --font-body:"Pretendard","Pretendard Variable","Noto Sans KR",-apple-system,BlinkMacSystemFont,sans-serif;
+  --font-caption:"Gowun Dodum","Noto Sans KR",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.7;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  padding:2.25rem 1.25rem 2.5rem;
+}
+.wrap{width:100%;max-width:720px;margin:0 auto;flex:1}
+.back{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--muted);
+  text-decoration:none;
+  margin-bottom:2.5rem;
+  transition:color .18s ease;
+}
+.back:hover,.back:focus-visible{color:var(--accent);outline:none}
+.eyebrow{
+  font-family:var(--font-caption);
+  font-size:.7rem;
+  letter-spacing:.22em;
+  color:var(--accent);
+  margin-bottom:.6rem;
+}
+h1{
+  font-family:var(--font-title);
+  font-size:clamp(1.9rem,6vw,2.4rem);
+  font-weight:700;
+  margin-bottom:.6rem;
+}
+.lead{
+  font-family:var(--font-caption);
+  font-size:.9rem;
+  color:var(--muted);
+  max-width:46ch;
+  margin-bottom:2.75rem;
+}
+.list{list-style:none;display:flex;flex-direction:column;gap:.75rem}
+.item{
+  display:block;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-left:4px solid var(--accent);
+  border-radius:0 12px 12px 0;
+  padding:1.15rem 1.35rem;
+  text-decoration:none;
+  color:inherit;
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.item:hover,.item:focus-visible{
+  transform:translateX(6px);
+  box-shadow:0 6px 18px rgba(43,42,38,.09);
+  border-color:rgba(43,42,38,.22);
+  border-left-color:var(--accent);
+  outline:none;
+}
+.date{
+  font-family:var(--font-caption);
+  font-size:.74rem;
+  letter-spacing:.06em;
+  color:var(--point-ink);
+  display:block;
+  margin-bottom:.3rem;
+}
+.item h2{
+  font-family:var(--font-title);
+  font-size:1.16rem;
+  font-weight:700;
+  margin-bottom:.35rem;
+}
+.item p{font-size:.88rem;color:var(--muted);line-height:1.6}
+.empty{
+  border:1px dashed rgba(43,42,38,.28);
+  border-radius:12px;
+  background:transparent;
+  padding:1.15rem 1.35rem;
+  text-decoration:none;
+  color:inherit;
+  display:block;
+  transition:border-color .18s ease, background .18s ease;
+}
+.empty:hover,.empty:focus-visible{
+  border-color:var(--accent);
+  background:rgba(47,93,80,.04);
+  outline:none;
+}
+.empty .date{color:var(--muted)}
+.empty h2{
+  font-family:var(--font-title);
+  font-size:1.05rem;
+  font-weight:400;
+  color:var(--muted);
+  margin-bottom:.3rem;
+}
+.empty p{font-size:.82rem;color:var(--muted);font-family:var(--font-caption)}
+footer{
+  margin-top:4rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--font-caption);
+  font-size:.75rem;
+  color:var(--muted);
+  text-align:center;
+}
+@media (prefers-reduced-motion:reduce){
+  .item{transition:none}
+  .item:hover,.item:focus-visible{transform:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../">← 수산나</a>
+
+  <p class="eyebrow">INSIGHT</p>
+  <h1>인사이트</h1>
+  <p class="lead">디퍼 언브랜딩 살롱에서 한 주를 지나며 실제로 만든 것과, 그 과정에서 배운 것.</p>
+
+  <ul class="list">
+
+    <!-- 새 인사이트는 이 위에 <li> 하나씩 쌓습니다. 최신이 맨 위.
+    <li>
+      <a class="item" href="260811.html">
+        <span class="date">2026.08.05 – 08.11</span>
+        <h2>여기에 제목</h2>
+        <p>여기에 한 줄 요약.</p>
+      </a>
+    </li>
+    -->
+
+    <li>
+      <a class="empty" href="template.html">
+        <span class="date">아직 비어 있습니다</span>
+        <h2>첫 인사이트를 기다리는 자리</h2>
+        <p>눌러보면 리포트 틀이 열립니다 — 복사해서 YYMMDD.html 로 저장하세요.</p>
+      </a>
+    </li>
+
+  </ul>
+
+  <footer>글짓는 약사 수산나 · 디퍼 언브랜딩 살롱 아카이브</footer>
+</div>
+</body>
+</html>
