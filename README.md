@@ -224,10 +224,24 @@ git add -A && git commit -m "새 인사이트 추가" && git push
 
 설정은 **Settings → Pages → Source: GitHub Actions** 입니다.
 
-워크플로 파일을 로컬에서 push하려면 깃허브 토큰에 `workflow` 권한이 있어야 합니다. 없으면 이렇게 더합니다:
+워크플로 파일을 로컬에서 push하려면 깃허브 토큰에 `workflow` 권한이 있어야 합니다. 이 컴퓨터의 토큰에는 없어서 (`gist, read:org, repo`) push가 거절됩니다:
+
+```
+! [remote rejected] main -> main (refusing to allow an OAuth App to create or
+  update workflow `.github/workflows/deploy.yml` without `workflow` scope)
+```
+
+그래서 2026-08-29에 이 파일은 **깃허브 웹에서 직접 만들었습니다** (Add file → Create new file). 웹 편집기는 이 제한을 받지 않습니다. 앞으로 이 파일을 고칠 때도 같은 방법을 쓰거나, 별도 터미널에서 아래를 실행해 권한을 더하면 됩니다 (브라우저 승인까지 마쳐야 반영됩니다):
 
 ```bash
 gh auth refresh -h github.com -s workflow
 ```
 
-권한을 더하지 않겠다면 **Settings → Pages → Source: Deploy from a branch → main / (root)** 로 두어도 똑같이 배포됩니다. 2026-08-07부터 08-29까지는 그 방식을 썼습니다.
+**워크플로 파일이 아닌 보통 페이지는 이 제한과 무관합니다** — 새 인사이트·과제·독서 기록은 그냥 `git push`로 올리면 됩니다.
+
+### 배포 방식이 바뀐 자취
+
+| 기간 | 방식 | Pages Source |
+|---|---|---|
+| 2026-08-07 ~ 08-29 | 브랜치 배포 | Deploy from a branch → main / (root) |
+| 2026-08-29 ~ | Actions 워크플로 | GitHub Actions |
