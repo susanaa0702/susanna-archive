@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>레미제라블 — 은그릇과 은전 · 수산나 아카이브</title>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 팔레트 "이른 아침 약국" — 2026-08-29. 대비값은 README 참조 */
+  --bg:#F5F8F7;
+  --surface:#FFFFFF;
+  --ink:#22312E;
+  --muted:#5A6B67;
+  --line:#D6E2DF;
+  --line-strong:#B6CBC5;
+  --shadow:rgba(34,49,46,.13);
+  --accent:#0B6E62;          /* 인사이트 — 청록 */
+  --accent-2:#A85520;        /* 과제 — 구운 흙빛 */
+  --accent-3:#7A3E5E;        /* 약사의 자리 — 자두 */
+  --accent-4:#3A5A8C;        /* 독서 기록 — 새벽 남색 */
+  --point:#A85520;
+  --point-ink:#A85520;
+  --tint:rgba(34,49,46,.05);
+  --tint-accent:rgba(11,110,98,.09);
+  --tint-2:rgba(168,85,32,.09);
+  --tint-3:rgba(122,62,94,.10);
+  --tint-4:rgba(58,90,140,.10);
+  --font-title:"Gowun Batang", serif;
+  --font-body:"Nanum Myeongjo", serif;
+  --font-caption:"Gowun Dodum", sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.8;
+  min-height:100vh;
+  padding:2.25rem 1.25rem 2.5rem;
+}
+.wrap{width:100%;max-width:680px;margin:0 auto}
+.back{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--muted);
+  text-decoration:none;
+  margin-bottom:2.5rem;
+  transition:color .18s ease;
+}
+.back:hover,.back:focus-visible{color:var(--accent-4);outline:none}
+.tag{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.72rem;
+  letter-spacing:.06em;
+  padding:.15rem .6rem;
+  border-radius:999px;
+  background:var(--tint-accent);
+  color:var(--accent);
+  margin-bottom:.6rem;
+}
+h1{
+  font-family:var(--font-title);
+  font-size:clamp(1.75rem,5.6vw,2.25rem);
+  font-weight:700;
+  line-height:1.4;
+  margin-bottom:.75rem;
+}
+.summary{
+  font-family:var(--font-title);
+  font-size:1.02rem;
+  color:var(--accent-4);
+  padding-bottom:2rem;
+  border-bottom:1px solid var(--line);
+  margin-bottom:2.5rem;
+}
+h2{
+  font-family:var(--font-title);
+  font-size:1.3rem;
+  font-weight:700;
+  margin:2.75rem 0 1rem;
+  padding-left:.7rem;
+  border-left:4px solid var(--accent-4);
+}
+h3{
+  font-family:var(--font-body);
+  font-size:1rem;
+  font-weight:700;
+  margin:1.75rem 0 .4rem;
+}
+p{margin-bottom:1rem}
+ul.plain{list-style:none}
+ul.plain li{padding:.6rem 0 .6rem 1.1rem;border-bottom:1px solid var(--line);font-size:.94rem;position:relative}
+ul.plain li:last-child{border-bottom:none}
+ul.plain li::before{content:"·";position:absolute;left:.2rem;color:var(--accent-4)}
+.qa{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:1.2rem 1.3rem;
+  margin-bottom:.85rem;
+}
+.qa h3{margin:0 0 .35rem}
+.qa p{font-size:.92rem;color:var(--muted);margin-bottom:0}
+.notice{
+  font-family:var(--font-caption);
+  font-size:.82rem;
+  color:var(--muted);
+  background:var(--tint-4);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-top:2.5rem;
+}
+.note{
+  font-family:var(--font-caption);
+  font-size:.8rem;
+  color:var(--muted);
+  background:var(--tint-2);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-bottom:2rem;
+}
+footer{
+  margin-top:3rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--font-caption);
+  font-size:.75rem;
+  color:var(--muted);
+  text-align:center;
+}
+blockquote{margin:1.25rem 0;padding:.9rem 1.2rem;background:var(--tint-4);border-left:4px solid var(--accent-4);border-radius:0 10px 10px 0;font-size:.95rem}
+blockquote p:last-child{margin-bottom:0}
+.meta{font-family:var(--font-caption);font-size:.84rem;color:var(--muted);background:var(--tint);border-radius:10px;padding:.85rem 1.1rem;margin-bottom:2rem}
+.meta p{margin-bottom:.35rem}
+.meta p:last-child{margin-bottom:0}
+.tablewrap{overflow-x:auto;margin:1.25rem 0}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--tint-4);font-weight:700}
+code{font-size:.9em;background:var(--tint);padding:.1rem .3rem;border-radius:4px}
+.appendix{margin-top:3.5rem;padding-top:1.75rem;border-top:2px solid var(--line)}
+.appendix h2{font-size:1.15rem}
+.src{font-family:var(--font-caption);font-size:.78rem;color:var(--muted);margin-top:2.5rem}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="./">← 독서 기록</a>
+
+  <p class="tag tag-club">독서모임</p>
+  <h1>레미제라블 — 은그릇과 은전</h1>
+  <p class="summary">빅토르 위고 『레미제라블』 1부 팡틴 · 11~13장과 「1817년」 첫머리 · 2026-08-29 — 19년의 벌이 못 한 일을 하룻밤이 했다.</p>
+
+  <div class="meta">
+    <p><strong>읽은 범위</strong> — 182~210쪽. 1부 팡틴 11장 「그가 하는 일」 · 12장 「주교가 일을 하다」 · 13장 「쁘띠 제르베」, 그리고 「1817년」 첫머리.</p>
+    <p><strong>판본 주의</strong> — 판본에 따라 쪽수가 다르다. 이 기록의 쪽수는 내가 읽은 판본을 기준으로 적는다.</p>
+  </div>
+
+  <h2>줄거리 — 세 장</h2>
+
+  <h3>11장 「그가 하는 일」</h3>
+  <p>장발장이 주교의 침실 문을 세 번 밀어 연다. 세 번째에 마른 돌쩌귀가 울고, 그 소리가 마지막 심판의 나팔처럼 들린다. 아무도 깨지 않는다. 근 반 시간 하늘을 가리던 구름이 갈라지고 달빛이 잠든 주교의 얼굴을 비춘다 — 이마 위에 마를 수 없는 빛, 그 하늘은 곧 그의 양심이었다.</p>
+  <p>장발장은 파멸의 심연과 구원의 심연 사이에서 머뭇거리다 모자를 벗었다 다시 쓰고, 벽장을 열어 은그릇을 담고 담을 넘는다.</p>
+
+  <h3>12장 「주교가 일을 하다」</h3>
+  <p>은그릇이 없어졌다는 외침이 나온다. 주교는 화단에 떨어진 빈 바구니를 주워 들고 부러진 물레나물 가지를 들여다보다가 묻는다 — 그 은그릇이 우리 물건이었던가.</p>
+  <p>헌병이 장발장을 붙잡아 오자 주교는 촛대까지 내주며 놓아 보낸다. 그리고 두 마디 — 약속을 잊지 말라는 것, 그리고 값을 치렀다는 것.</p>
+
+  <h3>13장 「쁘띠 제르베」</h3>
+  <p>장발장은 온종일 들판을 헤맨다. 열 살 사부아 소년의 40수 은전을 발로 밟고, 우는 아이를 위협해 쫓아 보낸다. 어둠이 내린 뒤 발밑의 은전을 보고서야 정신이 들어 아이의 이름을 부르며 달린다. 신부에게 두 번 돈을 건네며 자기를 잡아가게 해 달라고 한다.</p>
+  <p>세 갈래 길에서 무너져 <strong>"나는 불쌍한 놈이다"</strong>라 부르짖고, 19년 만에 처음으로 운다. 그의 의식 앞에 주교와 장발장 두 사람이 나란히 서고, 주교가 커지는 만큼 장발장은 작아져 그림자가 되었다가 사라진다. 그날 밤 마차꾼 하나가 주교관 문 앞 어둠 속에 꿇어앉아 기도하는 사람을 보았다.</p>
+
+  <h3>「1817년」 첫머리</h3>
+  <p>이야기가 뚝 끊기고 시대 풍경으로 넘어간다. 루이 18세, 세인트헬레나의 나폴레옹, 마르스 광장에 비를 맞고 썩어 가던 파란 나무통들. 이 장 도중에서 멈췄다.</p>
+
+  <h2>읽으며 생각한 것</h2>
+  <p>장발장은 감옥에 있는 동안에는 변하지 않았다. 오히려 더 악으로 들어갔다. 그런데 나와서, 한마디와 한 행동에 사람이 바뀌었다.</p>
+  <p>위고가 회개의 문턱 바로 뒤에 마지막 악행을 하나 더 놓아둔 것이 눈에 걸린다. 용서를 받은 다음인데 죄가 하나 더 있다. 그리고 그 죄의 상대가 열 살짜리 아이이고, 장의 제목이 그 아이의 이름이다.</p>
+
+  <h2>남는 물음</h2>
+  <ul class="plain">
+    <li>주교가 값을 치른 것은 무엇인가 — 은그릇인가, 영혼인가. 값을 치른다는 말은 왜 하필 사고파는 말인가.</li>
+    <li>19년이 못 바꾼 사람을 하룻밤이 바꿨다면, 사람을 바꾸는 것은 시간인가 사건인가.</li>
+    <li>왜 위고는 회개의 문턱 바로 뒤에 마지막 악행(쁘띠 제르베)을 놓았을까. 용서를 받은 다음에 죄가 하나 더 있어야 했던 이유는.</li>
+  </ul>
+
+  <h2>다음에 읽을 곳</h2>
+  <p>「1817년」 장을 끝까지. 이야기가 팡틴 쪽으로 넘어가는 자리다.</p>
+
+  <p class="src">2026-08-29. 독서모임 7회에서 함께 읽은 범위를 내가 읽은 대로 정리한 기록.</p>
+
+  <p class="notice">이 글은 개인적인 독서 기록입니다. 모임에서 다른 분들이 한 이야기는 옮기지 않습니다 — 당사자가 읽습니다. 쪽수는 내가 읽은 판본을 기준으로 합니다.</p>
+
+  <footer>글짓는 약사 수산나 · 디퍼 언브랜딩 살롱 아카이브</footer>
+</div>
+</body>
+</html>
