@@ -17,6 +17,7 @@ susanna-archive/
 ├─ insight/
 │   ├─ index.html             인사이트 목록 (세로 리스트, 최신이 위)
 │   ├─ template.html          리포트 틀 (복사해서 쓰는 원본, 지우지 않음)
+│   ├─ 260829.html            새로 짓지 않고 이어서 고쳤다
 │   ├─ 260807.html            아카이브를 지었다
 │   └─ YYMMDD.html            주간 인사이트 리포트 한 편
 ├─ assignment/
@@ -43,6 +44,7 @@ susanna-archive/
 
 | 갈래 | 파일 | 제목 | 비고 |
 |---|---|---|---|
+| 인사이트 | `insight/260829.html` | 새로 짓지 않고 이어서 고쳤다 | 2026-08-23 ~ 08-29 |
 | 인사이트 | `insight/260807.html` | 아카이브를 지었다 | 2026-08-07 |
 | 과제 | (외부 링크) | 내 몸 신호 체크리스트 | `susanaa0702.github.io/self-check/` · featured |
 | 과제 | (외부 링크) | 글짓는 약사 수산나 — 네이버 블로그 | featured |
