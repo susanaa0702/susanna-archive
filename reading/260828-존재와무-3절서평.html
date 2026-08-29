@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>존재와 무 — 타자의 존재 III · 수산나 아카이브</title>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 팔레트 "이른 아침 약국" — 2026-08-29. 대비값은 README 참조 */
+  --bg:#F5F8F7;
+  --surface:#FFFFFF;
+  --ink:#22312E;
+  --muted:#5A6B67;
+  --line:#D6E2DF;
+  --line-strong:#B6CBC5;
+  --shadow:rgba(34,49,46,.13);
+  --accent:#0B6E62;          /* 인사이트 — 청록 */
+  --accent-2:#A85520;        /* 과제 — 구운 흙빛 */
+  --accent-3:#7A3E5E;        /* 약사의 자리 — 자두 */
+  --accent-4:#3A5A8C;        /* 독서 기록 — 새벽 남색 */
+  --point:#A85520;
+  --point-ink:#A85520;
+  --tint:rgba(34,49,46,.05);
+  --tint-accent:rgba(11,110,98,.09);
+  --tint-2:rgba(168,85,32,.09);
+  --tint-3:rgba(122,62,94,.10);
+  --tint-4:rgba(58,90,140,.10);
+  --font-title:"Gowun Batang", serif;
+  --font-body:"Nanum Myeongjo", serif;
+  --font-caption:"Gowun Dodum", sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.8;
+  min-height:100vh;
+  padding:2.25rem 1.25rem 2.5rem;
+}
+.wrap{width:100%;max-width:680px;margin:0 auto}
+.back{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--muted);
+  text-decoration:none;
+  margin-bottom:2.5rem;
+  transition:color .18s ease;
+}
+.back:hover,.back:focus-visible{color:var(--accent-4);outline:none}
+.tag{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.72rem;
+  letter-spacing:.06em;
+  padding:.15rem .6rem;
+  border-radius:999px;
+  background:var(--tint-accent);
+  color:var(--accent);
+  margin-bottom:.6rem;
+}
+h1{
+  font-family:var(--font-title);
+  font-size:clamp(1.75rem,5.6vw,2.25rem);
+  font-weight:700;
+  line-height:1.4;
+  margin-bottom:.75rem;
+}
+.summary{
+  font-family:var(--font-title);
+  font-size:1.02rem;
+  color:var(--accent-4);
+  padding-bottom:2rem;
+  border-bottom:1px solid var(--line);
+  margin-bottom:2.5rem;
+}
+h2{
+  font-family:var(--font-title);
+  font-size:1.3rem;
+  font-weight:700;
+  margin:2.75rem 0 1rem;
+  padding-left:.7rem;
+  border-left:4px solid var(--accent-4);
+}
+h3{
+  font-family:var(--font-body);
+  font-size:1rem;
+  font-weight:700;
+  margin:1.75rem 0 .4rem;
+}
+p{margin-bottom:1rem}
+ul.plain{list-style:none}
+ul.plain li{padding:.6rem 0 .6rem 1.1rem;border-bottom:1px solid var(--line);font-size:.94rem;position:relative}
+ul.plain li:last-child{border-bottom:none}
+ul.plain li::before{content:"·";position:absolute;left:.2rem;color:var(--accent-4)}
+.qa{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:1.2rem 1.3rem;
+  margin-bottom:.85rem;
+}
+.qa h3{margin:0 0 .35rem}
+.qa p{font-size:.92rem;color:var(--muted);margin-bottom:0}
+.notice{
+  font-family:var(--font-caption);
+  font-size:.82rem;
+  color:var(--muted);
+  background:var(--tint-4);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-top:2.5rem;
+}
+.note{
+  font-family:var(--font-caption);
+  font-size:.8rem;
+  color:var(--muted);
+  background:var(--tint-2);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-bottom:2rem;
+}
+footer{
+  margin-top:3rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--font-caption);
+  font-size:.75rem;
+  color:var(--muted);
+  text-align:center;
+}
+blockquote{margin:1.25rem 0;padding:.9rem 1.2rem;background:var(--tint-4);border-left:4px solid var(--accent-4);border-radius:0 10px 10px 0;font-size:.95rem}
+blockquote p:last-child{margin-bottom:0}
+.meta{font-family:var(--font-caption);font-size:.84rem;color:var(--muted);background:var(--tint);border-radius:10px;padding:.85rem 1.1rem;margin-bottom:2rem}
+.meta p{margin-bottom:.35rem}
+.meta p:last-child{margin-bottom:0}
+.tablewrap{overflow-x:auto;margin:1.25rem 0}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--tint-4);font-weight:700}
+code{font-size:.9em;background:var(--tint);padding:.1rem .3rem;border-radius:4px}
+.appendix{margin-top:3.5rem;padding-top:1.75rem;border-top:2px solid var(--line)}
+.appendix h2{font-size:1.15rem}
+.src{font-family:var(--font-caption);font-size:.78rem;color:var(--muted);margin-top:2.5rem}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="./">← 독서 기록</a>
+
+  <p class="tag tag-solo">혼자 읽기</p>
+  <h1>존재와 무 — 타자의 존재 III</h1>
+  <p class="summary">장 폴 사르트르 『존재와 무』 제3부 대타존재 · 제1장 타자의 존재 III · 2026-08-28 — 세 철학자의 통찰과 한계를 함께 읽는다.</p>
+
+  <div class="meta">
+    <p><strong>키워드</strong> — 인식, 인정, 함께-있는-존재(Mitsein)</p>
+  </div>
+
+  <p>이 절에서 사르트르는 타자의 존재가 나의 존재와 어떻게 연결되는지를 살펴보고, 후설, 헤겔, 하이데거의 이론을 검토하면서 그들의 통찰과 한계를 함께 제시한다.</p>
+
+  <p>후설은 타자를 나와 마찬가지로 의식을 가진 존재로 이해하려 한다. 다만 그 길은 몸짓을 보고 짐작하는 것이 아니라, 세계가 누구에게나 있는 것이려면 대상 자체가 이미 나 아닌 시선을 가리켜야 한다는 것이었다. 그러나 사르트르는 그렇게 얻은 타자가 결국 나의 의식 속에 나타난 하나의 의미에 머문다고 본다. 있음을 앎으로 재려 한 셈이다.</p>
+
+  <p>헤겔은 나의 자기의식에 다른 사람의 존재와 인정이 필요하다고 말한다. 문제를 앎에서 있음으로 옮긴 이 대목을 사르트르는 헤겔의 천재성이라 부른다. 나는 인정받고 싶지만 종속되고 싶지는 않고 타인도 마찬가지이므로, '주인-노예'는 그 충돌의 결과로 생겨난다. 그런데도 헤겔은 둘을 위에서 내려다보며 하나의 큰 정신의 두 조각이라 말한다. 사르트르가 이중의 낙관론이라 부르며 비판하는 것이 이 자리다. 그렇게 내려다보는 자리에 설 수 있는 사람은 아무도 없다.</p>
+
+  <p>하이데거는 타자를 나중에 만나는 대상이 아니라, 처음부터 나와 함께 세계를 구성하는 '함께-있는-존재(Mitsein)'로 설명한다. 마치 하나의 목적을 향해 연대하는 팀처럼 말이다. 하지만 이 타인은 추상적이고 비독립적이다. 실체를 보여주지 못했다.</p>
+
+  <p>이 세 철학자의 이론과 모순으로부터 사르트르는 타자를 어떻게 정의할지 궁금해진다.</p>
+
+  <p class="src">2026-08-28. 같은 절에서 개념을 잡은 노트는 <a href="260827-존재와무-3절.html">여기</a>, 이어지는 4절 「시선」 노트는 <a href="260828-존재와무-4절시선.html">여기</a>.</p>
+
+  <p class="notice">이 글은 개인적인 독서 기록입니다. 인용한 책의 쪽수는 읽은 판본을 기준으로 합니다.</p>
+
+  <footer>글짓는 약사 수산나 · 디퍼 언브랜딩 살롱 아카이브</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>존재와 무 — 시선 · 수산나 아카이브</title>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 팔레트 "이른 아침 약국" — 2026-08-29. 대비값은 README 참조 */
+  --bg:#F5F8F7;
+  --surface:#FFFFFF;
+  --ink:#22312E;
+  --muted:#5A6B67;
+  --line:#D6E2DF;
+  --line-strong:#B6CBC5;
+  --shadow:rgba(34,49,46,.13);
+  --accent:#0B6E62;          /* 인사이트 — 청록 */
+  --accent-2:#A85520;        /* 과제 — 구운 흙빛 */
+  --accent-3:#7A3E5E;        /* 약사의 자리 — 자두 */
+  --accent-4:#3A5A8C;        /* 독서 기록 — 새벽 남색 */
+  --point:#A85520;
+  --point-ink:#A85520;
+  --tint:rgba(34,49,46,.05);
+  --tint-accent:rgba(11,110,98,.09);
+  --tint-2:rgba(168,85,32,.09);
+  --tint-3:rgba(122,62,94,.10);
+  --tint-4:rgba(58,90,140,.10);
+  --font-title:"Gowun Batang", serif;
+  --font-body:"Nanum Myeongjo", serif;
+  --font-caption:"Gowun Dodum", sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.8;
+  min-height:100vh;
+  padding:2.25rem 1.25rem 2.5rem;
+}
+.wrap{width:100%;max-width:680px;margin:0 auto}
+.back{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--muted);
+  text-decoration:none;
+  margin-bottom:2.5rem;
+  transition:color .18s ease;
+}
+.back:hover,.back:focus-visible{color:var(--accent-4);outline:none}
+.tag{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.72rem;
+  letter-spacing:.06em;
+  padding:.15rem .6rem;
+  border-radius:999px;
+  background:var(--tint-accent);
+  color:var(--accent);
+  margin-bottom:.6rem;
+}
+h1{
+  font-family:var(--font-title);
+  font-size:clamp(1.75rem,5.6vw,2.25rem);
+  font-weight:700;
+  line-height:1.4;
+  margin-bottom:.75rem;
+}
+.summary{
+  font-family:var(--font-title);
+  font-size:1.02rem;
+  color:var(--accent-4);
+  padding-bottom:2rem;
+  border-bottom:1px solid var(--line);
+  margin-bottom:2.5rem;
+}
+h2{
+  font-family:var(--font-title);
+  font-size:1.3rem;
+  font-weight:700;
+  margin:2.75rem 0 1rem;
+  padding-left:.7rem;
+  border-left:4px solid var(--accent-4);
+}
+h3{
+  font-family:var(--font-body);
+  font-size:1rem;
+  font-weight:700;
+  margin:1.75rem 0 .4rem;
+}
+p{margin-bottom:1rem}
+ul.plain{list-style:none}
+ul.plain li{padding:.6rem 0 .6rem 1.1rem;border-bottom:1px solid var(--line);font-size:.94rem;position:relative}
+ul.plain li:last-child{border-bottom:none}
+ul.plain li::before{content:"·";position:absolute;left:.2rem;color:var(--accent-4)}
+.qa{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:1.2rem 1.3rem;
+  margin-bottom:.85rem;
+}
+.qa h3{margin:0 0 .35rem}
+.qa p{font-size:.92rem;color:var(--muted);margin-bottom:0}
+.notice{
+  font-family:var(--font-caption);
+  font-size:.82rem;
+  color:var(--muted);
+  background:var(--tint-4);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-top:2.5rem;
+}
+.note{
+  font-family:var(--font-caption);
+  font-size:.8rem;
+  color:var(--muted);
+  background:var(--tint-2);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-bottom:2rem;
+}
+footer{
+  margin-top:3rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--font-caption);
+  font-size:.75rem;
+  color:var(--muted);
+  text-align:center;
+}
+blockquote{margin:1.25rem 0;padding:.9rem 1.2rem;background:var(--tint-4);border-left:4px solid var(--accent-4);border-radius:0 10px 10px 0;font-size:.95rem}
+blockquote p:last-child{margin-bottom:0}
+.meta{font-family:var(--font-caption);font-size:.84rem;color:var(--muted);background:var(--tint);border-radius:10px;padding:.85rem 1.1rem;margin-bottom:2rem}
+.meta p{margin-bottom:.35rem}
+.meta p:last-child{margin-bottom:0}
+.tablewrap{overflow-x:auto;margin:1.25rem 0}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--tint-4);font-weight:700}
+code{font-size:.9em;background:var(--tint);padding:.1rem .3rem;border-radius:4px}
+.appendix{margin-top:3.5rem;padding-top:1.75rem;border-top:2px solid var(--line)}
+.appendix h2{font-size:1.15rem}
+.src{font-family:var(--font-caption);font-size:.78rem;color:var(--muted);margin-top:2.5rem}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="./">← 독서 기록</a>
+
+  <p class="tag tag-solo">혼자 읽기</p>
+  <h1>존재와 무 — 시선</h1>
+  <p class="summary">장 폴 사르트르 『존재와 무』 제3부 대타존재 · 1장 4절 · 2026-08-28 — 타인은 내가 보는 자가 아니라 나를 보는 자다. 그 눈 앞에서 나는 처음으로 '바깥'을 가진다.</p>
+
+  <div class="meta">
+    <p><strong>책의 어디쯤인가</strong> — 3부 1장 4절. 바로 앞이 「후설·헤겔·하이데거」, 바로 뒤가 2장 「몸」이다.</p>
+    <p>앞 절에서 선배 셋을 채점하고 났으니, 이제 사르트르 자신의 답이 나오는 자리다.</p>
+  </div>
+
+  <h2>붙들 질문 하나</h2>
+  <p>3절에서 사르트르는 못박았다 — <strong>타인은 내가 '아는' 상대가 아니라 내가 '당하는' 상대여야 한다.</strong></p>
+  <p>그런데 <strong>어떻게 당한다</strong>는 것인가. 4절이 그 답이다. 답은 두 낱말이다 — <strong>나를 보는 눈, 그리고 그 앞에서 오는 부끄러움.</strong></p>
+
+  <h2>1. 열쇠구멍 — 이 대목의 심장</h2>
+  <p>두 장면이다.</p>
+  <p><strong>첫 장면.</strong> 질투인지 호기심인지, 복도에서 문에 귀를 대고 열쇠구멍을 들여다본다. 이때 <strong>'나'는 없다.</strong> 나를 의식하지 않는다. 오직 보는 일, 듣는 일만 있다. 문은 '귀를 대는 것'이고 열쇠구멍은 '들여다보는 것'일 뿐, 나 자신은 어디에도 없다. 부끄러움도 없다 — 부끄러울 '내'가 아직 없으니까.</p>
+  <p><strong>둘째 장면.</strong> 복도에서 <strong>발소리</strong>가 난다. 그 순간 <strong>나는 있게 된다.</strong> 나는 이제 <em>엿보는 사람</em>이다. 부끄러움이 확 온다.</p>
+  <p>무엇이 달라졌나. 내가 하던 일은 똑같다. 달라진 건 하나 — <strong>누가 나를 보았다</strong>는 것. 그 하나로 나는 없던 데서 있는 것이 되고, 그것도 <strong>내가 고르지 않은 모습</strong>으로 있게 된다.</p>
+
+  <h2>2. 시선은 눈이 아니다</h2>
+  <p>사르트르는 못박는다 — <strong>시선을 붙드는 순간 나는 눈을 보지 않는다.</strong> 눈알과 시선은 동시에 성립하지 않는다. 상대의 눈 색깔을 보고 있다면 나는 시선을 겪고 있는 것이 아니다.</p>
+  <p>그래서 시선은 사람 눈이 아니어도 된다.</p>
+  <ul class="plain">
+    <li>커튼이 흔들리는 것</li>
+    <li>나뭇가지가 부스럭거리는 것</li>
+    <li>언덕 위 농가의 반쯤 열린 덧창</li>
+    <li>복도의 발소리</li>
+  </ul>
+
+  <h2>3. 시선이 나에게 하는 일 — 셋</h2>
+
+  <h3>❶ 나에게 '바깥'이 생긴다</h3>
+  <p>내 등은 내가 못 본다. 남만 본다. 시선은 나에게 그런 등을 하나 만들어 준다.</p>
+  <p>나는 이제 "엿보는 사람"인데, 그 모습은 내 밖에 있고 <strong>나는 거기 결코 가 닿을 수 없다.</strong> 이것이 <strong>대타존재</strong>다.</p>
+  <p>3절의 문장이 여기서 실현된다 — <em>나는 타인에게 있어서의 내 모습을 결코 알 수 없다, 다만 겪을 뿐이다.</em> 3절에서는 원칙이었던 것이 4절에서는 실제로 일어나는 사건이 된다.</p>
+
+  <h3>❷ 세계가 나에게서 새어나간다</h3>
+  <p>시선 이전에는 세계가 나를 중심으로 놓여 있었다. 거리도 나를 기준으로 재였다.</p>
+  <p>그런데 누가 들어오면 <strong>방 안의 물건들이 그 사람 쪽으로도 얼굴을 돌린다.</strong> 내가 못 보는 면을 그 사람이 보고, 내 세계에 내가 통제 못하는 두 번째 중심이 생긴다.</p>
+  <p>사르트르는 이걸 <strong>배수구</strong>에 비유한다 — 내 세계가 그 구멍으로 조용히 빠져나간다.</p>
+
+  <h3>❸ 내 자유가 다른 자유에 걸린다</h3>
+  <p>어떤 손님이 나를 "무뚝뚝한 약사"라고 여긴다 하자. 나는 그 무뚝뚝함을 <strong>내가 만들지 않았다.</strong> 그런데 나는 그것으로 <strong>있다.</strong></p>
+  <p>아무리 친절하게 굴어도 내 손으로는 지울 수 없다 — <strong>그건 그 사람의 자유에 달린 일</strong>이니까.</p>
+  <p>핵심은 나를 제한하는 것이 <strong>돌멩이 같은 사물이 아니라 또 하나의 자유</strong>라는 것이다. 그래서 협상도 계산도 안 된다. 돌은 치우면 되지만 시선은 치울 수가 없다.</p>
+
+  <h2>4. 왜 이것이 '확실'한가</h2>
+  <p>3절에서 사르트르가 요구한 것은 개연성이 아니라 확실성이었다. 그 요구를 시선이 어떻게 통과하는가.</p>
+  <blockquote><p><strong>발소리가 알고 보니 바람이었어도 부끄러움은 이미 왔다.</strong></p></blockquote>
+  <p>착각이 드러나도 무너지지 않는다. 그 순간 드러난 것은 <em>저 사람이 있다</em>가 아니라 <strong>나는 보일 수 있는 존재다</strong>라는 사실이기 때문이다.</p>
+  <p>구체적인 저 사람은 여전히 개연적이다. 그러나 <strong>보임을 당함</strong> 자체는 확실하다. 아는 게 아니라 겪는 것이라서 3절의 채점표를 통과한다.</p>
+
+  <h2>5. 마주 볼 수는 없다 → 그래서 갈등</h2>
+  <p>내가 <strong>돌아서서 그 사람을 보는 순간</strong> 그 사람은 내 앞의 <strong>물건</strong>이 되고 나는 다시 주체로 돌아온다. 시선은 물러간다.</p>
+  <p>즉 <strong>둘이 동시에 주체일 수는 없다.</strong> 누군가 보면 누군가는 보이는 자가 된다. 자리를 주고받을 뿐이다.</p>
+  <p>이것이 3부 3장에서 사랑·욕망·미움이 전부 갈등의 변주로 다뤄지는 뿌리다.</p>
+  <blockquote><p><strong>주의</strong> — 흔히 여기에 사르트르의 <em>"지옥은 타인이다"</em>를 곁들인다. 뜻은 통하지만, 그 문장은 희곡 『닫힌 방』의 것이지 『존재와 무』의 문장이 아니다. 옮겨 적을 때 출처를 갈라 둔다.</p></blockquote>
+
+  <h2>접어둘 한 줄</h2>
+  <p>3절에서 셋 다 타인을 자기 쪽으로 끌어왔다면, 4절에서 사르트르가 찾아낸 타인은 <strong>나를 자기 쪽으로 끌어가는</strong> 타인이다.</p>
+  <p>그는 내가 보는 자가 아니라 <strong>나를 보는 자</strong>이고, 나는 그 앞에서 처음으로 '바깥'을 가진다.</p>
+
+  <div class="appendix">
+  <h2>부록 · 책을 펴 놓고 대조할 때</h2>
+  <p>위의 쉬운 말이 책의 어느 용어에 붙는지 잇는 자리다.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>쉬운 말</th><th>책 속 용어</th></tr></thead>
+    <tbody>
+      <tr><td>나를 보는 눈</td><td><strong>시선</strong>(le regard) → 본문의 <strong>발소리</strong></td></tr>
+      <tr><td>보임을 당함</td><td><strong>être-regardé</strong>(보여지는 존재) → 본문의 "나는 보일 수 있는 존재다"</td></tr>
+      <tr><td>내가 못 보는 내 등</td><td><strong>대타존재</strong>(être-pour-autrui) → 본문의 <strong>등</strong></td></tr>
+      <tr><td>부끄러움</td><td><strong>수치</strong>(honte) — "수치는 본성상 인정이다" → 본문의 <strong>열쇠구멍 둘째 장면</strong></td></tr>
+      <tr><td>세계가 빠져나감</td><td><strong>배수구 / 내출혈</strong>, 세계의 <strong>탈중심화</strong> → 본문의 <strong>두 번째 중심</strong></td></tr>
+      <tr><td>남의 자유에 걸린 나</td><td>내 가능성이 <strong>죽은 가능성</strong>이 된다 → 본문의 <strong>무뚝뚝한 약사</strong></td></tr>
+      <tr><td>돌아보면 물건이 된다</td><td>두 주체는 동시에 설 수 없다 → 3장 <strong>갈등</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+
+  <h2>다음에 읽을 곳</h2>
+  <p><strong>2장 「몸」</strong> — 시선 앞에서 내가 가지게 된 '바깥'은 결국 몸이다. 내가 사는 몸과 남에게 보이는 몸.</p>
+  <p>그다음 <strong>3장 「타자와의 구체적 관계」</strong> — "둘이 동시에 주체일 수 없다"가 실제 관계로 펼쳐지는 자리다. 1절 사랑·언어, 2절 무관심·욕망·미움. 전부 같은 갈등의 변주다.</p>
+
+  <p class="src">2026-08-28. 3부 1장 4절을 읽고 개념을 잡기 위해 정리한 노트. 앞 절의 노트는 <a href="260827-존재와무-3절.html">여기</a>, 그 절의 서평은 <a href="260828-존재와무-3절서평.html">여기</a>.</p>
+
+  <p class="notice">이 글은 개인적인 독서 기록입니다. 인용한 책의 쪽수는 읽은 판본을 기준으로 합니다.</p>
+
+  <footer>글짓는 약사 수산나 · 디퍼 언브랜딩 살롱 아카이브</footer>
+</div>
+</body>
+</html>
