@@ -4,29 +4,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>수산나 — 아카이브</title>
-<meta name="description" content="약을 짓고 책을 읽고 가끔 씁니다.">
+<title>글짓는 약사 — 수산나 아카이브</title>
+<meta name="description" content="약을 짓고, 글을 짓고, AI와 함께 만듭니다.">
 <link rel="icon" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F6F4EC;
-  --accent:#2F5D50;
-  --accent-2:#44637F;
-  --accent-3:#A85B2C;
-  --icon-insight:#3F7D2F;
-  --point:#C2703D;
-  --point-ink:#A85B2C;
-  --ink:#2B2A26;
-  --muted:#6B6A61;
+  /* 팔레트 "이른 아침 약국" — 2026-08-29. 대비값은 README 참조 */
+  --bg:#F5F8F7;
   --surface:#FFFFFF;
-  --line:rgba(43,42,38,.14);
+  --ink:#22312E;
+  --muted:#5A6B67;
+  --line:#D6E2DF;
+  --line-strong:#B6CBC5;
+  --shadow:rgba(34,49,46,.13);
+  --accent:#0B6E62;          /* 인사이트 — 청록 */
+  --accent-2:#A85520;        /* 과제 — 구운 흙빛 */
+  --accent-3:#7A3E5E;        /* 약사의 자리 — 자두 */
+  --accent-4:#3A5A8C;        /* 독서 기록 — 새벽 남색 */
+  --point:#A85520;
+  --point-ink:#A85520;
+  --tint:rgba(34,49,46,.05);
+  --tint-accent:rgba(11,110,98,.09);
+  --tint-2:rgba(168,85,32,.09);
+  --tint-3:rgba(122,62,94,.10);
+  --tint-4:rgba(58,90,140,.10);
   --font-title:"Gowun Batang", serif;
-  --font-body:"Pretendard","Pretendard Variable","Noto Sans KR",-apple-system,BlinkMacSystemFont,sans-serif;
-  --font-caption:"Gowun Dodum","Noto Sans KR",sans-serif;
+  --font-body:"Nanum Myeongjo", serif;
+  --font-caption:"Gowun Dodum", sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
@@ -44,12 +52,12 @@ body{
   padding:3rem 1.25rem 2rem;
   text-align:center;
 }
-.wrap{width:100%;max-width:880px}
+.wrap{width:100%;max-width:960px}
 .eyebrow{
   font-family:var(--font-caption);
   font-size:.72rem;
   letter-spacing:.22em;
-  color:var(--accent-2);
+  color:var(--accent);
   text-transform:uppercase;
   margin-bottom:1.1rem;
 }
@@ -72,27 +80,25 @@ h1{
   margin:2rem auto 2.25rem;
 }
 .cards{
-  display:flex;
-  gap:1rem;
-  justify-content:center;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:.9rem;
   align-items:stretch;
 }
 .card{
-  flex:1 1 0;
-  min-width:0;
   display:block;
   background:var(--surface);
   border:1px solid var(--line);
   border-radius:14px;
-  padding:1.6rem 1.25rem 1.5rem;
+  padding:1.6rem 1.1rem 1.5rem;
   text-decoration:none;
   color:inherit;
   transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 .card:hover,.card:focus-visible{
   transform:translateY(-4px);
-  box-shadow:0 10px 24px rgba(43,42,38,.10);
-  border-color:rgba(43,42,38,.22);
+  box-shadow:0 10px 24px var(--shadow);
+  border-color:var(--line-strong);
   outline:none;
 }
 .icon{
@@ -101,24 +107,24 @@ h1{
   margin:0 auto .95rem;
   display:flex;align-items:center;justify-content:center;
 }
-.card-insight .icon{background:rgba(63,125,47,.12)}
-.card-assignment .icon{background:rgba(68,99,127,.10)}
-.card-counsel .icon{background:rgba(168,91,44,.10)}
-.card-insight .icon svg{stroke:var(--icon-insight)}
-.card-assignment .icon svg{stroke:var(--accent-2)}
-.card-counsel .icon svg{stroke:var(--accent-3)}
+.icon svg{stroke:currentColor}
+.card-insight .icon{background:var(--tint-accent);color:var(--accent)}
+.card-assignment .icon{background:var(--tint-2);color:var(--accent-2)}
+.card-counsel .icon{background:var(--tint-3);color:var(--accent-3)}
+.card-reading .icon{background:var(--tint-4);color:var(--accent-4)}
 .card h2{
   font-family:var(--font-title);
-  font-size:1.3rem;
+  font-size:1.25rem;
   font-weight:700;
   margin-bottom:.45rem;
 }
 .card-insight h2{color:var(--accent)}
 .card-assignment h2{color:var(--accent-2)}
 .card-counsel h2{color:var(--accent-3)}
+.card-reading h2{color:var(--accent-4)}
 .card p{
   font-family:var(--font-caption);
-  font-size:.85rem;
+  font-size:.82rem;
   color:var(--muted);
   line-height:1.65;
 }
@@ -129,18 +135,21 @@ footer{
   color:var(--muted);
   letter-spacing:.02em;
 }
-@media (max-width:720px){
-  .cards{flex-direction:column;gap:.75rem}
+@media (max-width:900px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:600px){
+  .cards{grid-template-columns:1fr;gap:.7rem}
   .card{
     display:flex;
     align-items:center;
     gap:1rem;
     text-align:left;
-    padding:1.05rem 1.15rem;
+    padding:1rem 1.1rem;
   }
-  .icon{margin:0;flex:0 0 auto;width:46px;height:46px}
-  .card h2{font-size:1.15rem;margin-bottom:.15rem}
-  .card p{font-size:.8rem;line-height:1.5}
+  .icon{margin:0;flex:0 0 auto;width:44px;height:44px}
+  .card h2{font-size:1.1rem;margin-bottom:.15rem}
+  .card p{font-size:.78rem;line-height:1.5}
   .card p br{display:none}
   .rule{margin:1.6rem auto 1.8rem}
   footer{margin-top:2.25rem}
@@ -153,15 +162,15 @@ footer{
 </head>
 <body>
 <main class="wrap">
-  <p class="eyebrow">글짓는 약사 수산나</p>
-  <h1>수산나</h1>
-  <p class="tagline">약을 짓고 책을 읽고 가끔 씁니다</p>
+  <p class="eyebrow">Susanna · Unbranding Salon</p>
+  <h1>글짓는 약사</h1>
+  <p class="tagline">약을 짓고, 글을 짓고, AI와 함께 만듭니다</p>
   <div class="rule"></div>
 
   <nav class="cards">
     <a class="card card-insight" href="insight/">
       <span class="icon" aria-hidden="true">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3F7D2F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 21v-7.5"/>
           <path d="M12 13.5c0-3.3 2.7-6 6-6 0 3.3-2.7 6-6 6z"/>
           <path d="M12 16c0-2.8-2.2-5-5-5 0 2.8 2.2 5 5 5z"/>
@@ -169,26 +178,26 @@ footer{
       </span>
       <span>
         <h2>Insight</h2>
-        <p>살롱에서 한 주를 지나며<br>보고 배운 것을 정리한 리포트</p>
+        <p>살롱에서 한 주를 지나며 <br>보고 배운 것을 정리한 리포트</p>
       </span>
     </a>
 
     <a class="card card-assignment" href="assignment/">
       <span class="icon" aria-hidden="true">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#44637F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 3 3 8l9 5 9-5-9-5z"/>
           <path d="M3 13l9 5 9-5"/>
         </svg>
       </span>
       <span>
         <h2>Assignment</h2>
-        <p>살롱 과제로 실제로 만든<br>결과물과 그 방법</p>
+        <p>살롱 과제로 실제로 만든 <br>결과물과 그 방법</p>
       </span>
     </a>
 
     <a class="card card-counsel" href="counsel/">
       <span class="icon" aria-hidden="true">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#A85B2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M4.5 10.5h15"/>
           <path d="M6 10.5a6 6 0 0 0 12 0"/>
           <path d="M12 16.5V20"/>
@@ -198,7 +207,21 @@ footer{
       </span>
       <span>
         <h2>Counsel</h2>
-        <p>약사로서 받는<br>질문과 상담들</p>
+        <p>카운터에서 자주 받는 물음을 <br>일반 자료로 정리한 글</p>
+      </span>
+    </a>
+
+    <a class="card card-reading" href="reading/">
+      <span class="icon" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 6.5C10.5 5.2 8.5 4.5 4 4.5v13C8.5 17.5 10.5 18.2 12 19.5"/>
+          <path d="M12 6.5C13.5 5.2 15.5 4.5 20 4.5v13c-4.5 0-6.5.7-8 2"/>
+          <path d="M12 6.5v13"/>
+        </svg>
+      </span>
+      <span>
+        <h2>Reading</h2>
+        <p>읽은 책에 대해 남긴 <br>독서 노트와 서평</p>
       </span>
     </a>
   </nav>

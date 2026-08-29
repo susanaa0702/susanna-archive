@@ -9,22 +9,33 @@
 <link rel="apple-touch-icon" href="../favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F6F4EC;
-  --accent:#2F5D50;
-  --accent-2:#44637F;
-  --point:#C2703D;
-  --point-ink:#A85B2C;
-  --ink:#2B2A26;
-  --muted:#6B6A61;
+  /* 팔레트 "이른 아침 약국" — 2026-08-29. 대비값은 README 참조 */
+  --bg:#F5F8F7;
   --surface:#FFFFFF;
-  --line:rgba(43,42,38,.14);
+  --ink:#22312E;
+  --muted:#5A6B67;
+  --line:#D6E2DF;
+  --line-strong:#B6CBC5;
+  --shadow:rgba(34,49,46,.13);
+  --accent:#0B6E62;          /* 인사이트 — 청록 */
+  --accent-2:#A85520;        /* 과제 — 구운 흙빛 */
+  --accent-3:#7A3E5E;        /* 약사의 자리 — 자두 */
+  --accent-4:#3A5A8C;        /* 독서 기록 — 새벽 남색 */
+  --point:#A85520;
+  --point-ink:#A85520;
+  --tint:rgba(34,49,46,.05);
+  --tint-accent:rgba(11,110,98,.09);
+  --tint-2:rgba(168,85,32,.09);
+  --tint-3:rgba(122,62,94,.10);
+  --tint-4:rgba(58,90,140,.10);
   --font-title:"Gowun Batang", serif;
-  --font-body:"Pretendard","Pretendard Variable","Noto Sans KR",-apple-system,BlinkMacSystemFont,sans-serif;
-  --font-caption:"Gowun Dodum","Noto Sans KR",sans-serif;
+  --font-body:"Nanum Myeongjo", serif;
+  --font-caption:"Gowun Dodum", sans-serif;
 }
+
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
 body{
@@ -93,13 +104,13 @@ p{margin-bottom:1rem}
 }
 .made h3{margin-top:0}
 .made p{font-size:.92rem;color:var(--muted);margin-bottom:.75rem}
-.made a{color:var(--accent-2);font-size:.88rem;font-family:var(--font-caption);text-decoration:none;border-bottom:1px solid rgba(68,99,127,.35)}
+.made a{color:var(--accent-2);font-size:.88rem;font-family:var(--font-caption);text-decoration:none;border-bottom:1px solid var(--accent-2)}
 .made a:hover,.made a:focus-visible{border-bottom-color:var(--accent-2);outline:none}
 figure{margin:1.25rem 0}
 figure img{width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
 figcaption{font-family:var(--font-caption);font-size:.78rem;color:var(--muted);margin-top:.5rem}
 .prompt{
-  background:rgba(43,42,38,.045);
+  background:var(--tint);
   border:1px solid var(--line);
   border-radius:10px;
   padding:1rem 1.1rem;
@@ -121,7 +132,7 @@ figcaption{font-family:var(--font-caption);font-size:.78rem;color:var(--muted);m
 .reflect strong{display:block;font-family:var(--font-title);font-size:1.02rem;margin-bottom:.15rem}
 .reflect span{font-size:.9rem;color:var(--muted)}
 .agent{
-  background:rgba(47,93,80,.06);
+  background:var(--tint-accent);
   border-radius:12px;
   padding:1.35rem 1.4rem;
   margin-top:1rem;
@@ -139,7 +150,7 @@ figcaption{font-family:var(--font-caption);font-size:.78rem;color:var(--muted);m
   font-family:var(--font-caption);
   font-size:.8rem;
   color:var(--muted);
-  background:rgba(194,112,61,.08);
+  background:var(--tint-2);
   border-radius:10px;
   padding:.9rem 1.1rem;
   margin-bottom:2rem;

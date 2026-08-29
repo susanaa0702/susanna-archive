@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>과제 — 수산나 아카이브</title>
+<title>독서 기록 — 수산나 아카이브</title>
 <link rel="icon" href="../favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="../favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,12 +58,12 @@ body{
   margin-bottom:2.5rem;
   transition:color .18s ease;
 }
-.back:hover,.back:focus-visible{color:var(--accent-2);outline:none}
+.back:hover,.back:focus-visible{color:var(--accent-4);outline:none}
 .eyebrow{
   font-family:var(--font-caption);
   font-size:.7rem;
   letter-spacing:.22em;
-  color:var(--accent-2);
+  color:var(--accent-4);
   margin-bottom:.6rem;
 }
 h1{
@@ -76,8 +76,8 @@ h1{
   font-family:var(--font-caption);
   font-size:.9rem;
   color:var(--muted);
-  max-width:46ch;
-  margin-bottom:2.75rem;
+  max-width:52ch;
+  margin-bottom:1.5rem;
 }
 .grid{
   list-style:none;
@@ -92,7 +92,7 @@ h1{
   height:100%;
   background:var(--surface);
   border:1px solid var(--line);
-  border-top:3px solid var(--accent-2);
+  border-top:3px solid var(--accent-4);
   border-radius:12px;
   padding:1.25rem 1.3rem 1.35rem;
   text-decoration:none;
@@ -103,35 +103,33 @@ h1{
   transform:translateY(-4px);
   box-shadow:0 10px 24px var(--shadow);
   border-color:var(--line-strong);
-  border-top-color:var(--accent-2);
+  border-top-color:var(--accent-4);
   outline:none;
 }
 .tag{
+  display:inline-block;
+  align-self:flex-start;
   font-family:var(--font-caption);
   font-size:.7rem;
-  letter-spacing:.1em;
-  color:var(--point-ink);
-  margin-bottom:.5rem;
+  letter-spacing:.06em;
+  padding:.15rem .55rem;
+  border-radius:999px;
+  margin-bottom:.6rem;
 }
+.tag-club{background:var(--tint-4);color:var(--accent-4)}
+.tag-solo{background:var(--tint-accent);color:var(--accent)}
 .card h2{
   font-family:var(--font-title);
   font-size:1.12rem;
   font-weight:700;
   margin-bottom:.4rem;
 }
-.featured .card h2{font-size:1.35rem}
 .card p{font-size:.86rem;color:var(--muted);line-height:1.6}
-.out{
-  font-family:var(--font-caption);
-  font-size:.74rem;
-  color:var(--accent-2);
-  margin-top:.9rem;
-}
 .empty{
   display:flex;
   flex-direction:column;
   height:100%;
-  min-height:132px;
+  min-height:140px;
   justify-content:center;
   border:1px dashed var(--line-strong);
   border-radius:12px;
@@ -141,8 +139,8 @@ h1{
   transition:border-color .18s ease, background .18s ease;
 }
 .empty:hover,.empty:focus-visible{
-  border-color:var(--accent-2);
-  background:var(--tint-2);
+  border-color:var(--accent-4);
+  background:var(--tint-4);
   outline:none;
 }
 .empty h2{
@@ -172,35 +170,18 @@ footer{
 <div class="wrap">
   <a class="back" href="../">← 글짓는 약사</a>
 
-  <p class="eyebrow">ASSIGNMENT</p>
-  <h1>과제</h1>
-  <p class="lead">살롱 과제로 실제로 만든 것들. 눌러서 결과물을 직접 볼 수 있습니다.</p>
+  <p class="eyebrow">READING</p>
+  <h1>독서 기록</h1>
+  <p class="lead">읽은 책에 대해 남긴 독서 노트와 서평. 살롱 밖에서 이어가는 읽기입니다.</p>
 
   <ul class="grid">
 
-    <li class="featured">
-      <a class="card" href="https://susanaa0702.github.io/self-check/" target="_blank" rel="noopener noreferrer">
-        <span class="tag">웹페이지</span>
-        <h2>내 몸 신호 체크리스트</h2>
-        <p>약국에서 자주 받는 물음을 한 장짜리 셀프 체크로 옮겼습니다. 개인의 응답은 담지 않고, 무엇을 살펴야 하는지 일반 자료로만 정리했습니다.</p>
-        <span class="out">셀프 체크 열기 ↗</span>
-      </a>
-    </li>
-
-    <li class="featured">
-      <a class="card" href="https://m.blog.naver.com/susanaa" target="_blank" rel="noopener noreferrer">
-        <span class="tag">블로그</span>
-        <h2>글짓는 약사 수산나</h2>
-        <p>약국에서 만난 사람들과 읽은 책에 대해 꾸준히 써온 곳. 아카이브 이전의 기록이 여기 쌓여 있습니다.</p>
-        <span class="out">네이버 블로그에서 열기 ↗</span>
-      </a>
-    </li>
-
-    <!-- 새 과제는 이 위·아래에 <li> 하나씩 쌓습니다.
+    <!-- 새 독서 기록은 이 위에 <li> 하나씩 쌓습니다. 최신이 맨 위.
+         태그는 tag-club(독서모임) 또는 tag-solo(혼자 읽기) 중 하나.
     <li>
-      <a class="card" href="260811-이름.html">
-        <span class="tag">태그</span>
-        <h2>여기에 제목</h2>
+      <a class="card" href="260903-존재와무.html">
+        <span class="tag tag-club">독서모임</span>
+        <h2>여기에 책 제목</h2>
         <p>여기에 한 줄 설명.</p>
       </a>
     </li>
@@ -208,8 +189,8 @@ footer{
 
     <li>
       <a class="empty" href="template.html">
-        <h2>다음 과제 자리</h2>
-        <p>눌러보면 과제 페이지 틀이 열립니다.</p>
+        <h2>첫 독서 기록을 기다리는 자리</h2>
+        <p>눌러보면 글 틀이 열립니다 — 복사해서 YYMMDD-책이름.html 로 저장하세요.</p>
       </a>
     </li>
 

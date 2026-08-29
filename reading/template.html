@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>약사의 자리 글 틀 — 수산나 아카이브</title>
+<title>독서 기록 틀 — 수산나 아카이브</title>
 <link rel="icon" href="../favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="../favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,7 +56,7 @@ body{
   margin-bottom:2.5rem;
   transition:color .18s ease;
 }
-.back:hover,.back:focus-visible{color:var(--accent-3);outline:none}
+.back:hover,.back:focus-visible{color:var(--accent-4);outline:none}
 .tag{
   display:inline-block;
   font-family:var(--font-caption);
@@ -78,7 +78,7 @@ h1{
 .summary{
   font-family:var(--font-title);
   font-size:1.02rem;
-  color:var(--accent-3);
+  color:var(--accent-4);
   padding-bottom:2rem;
   border-bottom:1px solid var(--line);
   margin-bottom:2.5rem;
@@ -89,7 +89,7 @@ h2{
   font-weight:700;
   margin:2.75rem 0 1rem;
   padding-left:.7rem;
-  border-left:4px solid var(--accent-3);
+  border-left:4px solid var(--accent-4);
 }
 h3{
   font-family:var(--font-body);
@@ -101,7 +101,7 @@ p{margin-bottom:1rem}
 ul.plain{list-style:none}
 ul.plain li{padding:.6rem 0 .6rem 1.1rem;border-bottom:1px solid var(--line);font-size:.94rem;position:relative}
 ul.plain li:last-child{border-bottom:none}
-ul.plain li::before{content:"·";position:absolute;left:.2rem;color:var(--accent-3)}
+ul.plain li::before{content:"·";position:absolute;left:.2rem;color:var(--accent-4)}
 .qa{
   background:var(--surface);
   border:1px solid var(--line);
@@ -115,7 +115,7 @@ ul.plain li::before{content:"·";position:absolute;left:.2rem;color:var(--accent
   font-family:var(--font-caption);
   font-size:.82rem;
   color:var(--muted);
-  background:var(--tint-3);
+  background:var(--tint-4);
   border-radius:10px;
   padding:.9rem 1.1rem;
   margin-top:2.5rem;
@@ -142,40 +142,36 @@ footer{
 </head>
 <body>
 <div class="wrap">
-  <a class="back" href="./">← 약사의 자리</a>
+  <a class="back" href="./">← 독서 기록</a>
 
-  <p class="note">이 페이지는 <strong>틀</strong>입니다. 복사해서 <code>YYMMDD-키워드.html</code>로 저장한 뒤 내용을 채우고, 이 안내 상자는 지우세요.<br>
-  태그가 <strong>상담</strong>인 글이면 위 <code>class="tag"</code> 색을 <code>var(--tint-3)</code> / <code>var(--accent-3)</code>로 바꾸세요.</p>
+  <p class="note">이 페이지는 <strong>틀</strong>입니다. 복사해서 <code>YYMMDD-책이름.html</code>로 저장한 뒤 내용을 채우고, 이 안내 상자는 지우세요.<br>
+  혼자 읽은 책이면 위 <code>class="tag"</code>를 <code>class="tag tag-solo"</code>로 바꾸고 글자를 "혼자 읽기"로 고치세요.</p>
 
-  <p class="tag">일반 자료</p>
-  <h1>여기에 제목</h1>
-  <p class="summary">한 줄 설명 — 이 글이 어떤 물음에 답하는지.</p>
+  <p class="tag tag-club">독서모임</p>
+  <h1>여기에 책 제목</h1>
+  <p class="summary">지은이 · 옮긴이 · 출판사 · 읽은 날 — 그리고 한 줄 요약.</p>
 
-  <h2>어떤 물음인가</h2>
-  <p>카운터에서 자주 받는 물음을 그대로 적습니다. 특정한 누구의 사연이 아니라, 여러 번 반복해 들은 일반적인 물음으로 적습니다.</p>
+  <h2>무엇을 읽었나</h2>
+  <p>어디까지 읽었는지, 어떤 판본인지 적습니다. 모임 책이면 그날 다룬 범위를 적습니다.</p>
 
-  <h2>정리</h2>
+  <h2>남은 문장</h2>
   <div class="qa">
-    <h3>소제목</h3>
-    <p>일반적인 정보를 한두 문단으로.</p>
-  </div>
-  <div class="qa">
-    <h3>소제목</h3>
-    <p>일반적인 정보를 한두 문단으로.</p>
+    <h3>쪽수</h3>
+    <p>옮겨 적을 문장은 짧게. 긴 인용은 하지 않고, 왜 걸렸는지를 옆에 붙입니다.</p>
   </div>
 
-  <h2>이럴 땐 병원으로</h2>
+  <h2>읽으며 생각한 것</h2>
+  <div class="qa">
+    <h3>소제목</h3>
+    <p>실제로 읽으며 든 생각만 적습니다. 책 소개나 남의 해설을 옮기지 않습니다.</p>
+  </div>
+
+  <h2>다음에 읽을 것</h2>
   <ul class="plain">
-    <li>스스로 판단하지 말고 진료를 받아야 하는 경우</li>
-    <li>같은 증상이 오래 이어질 때</li>
+    <li>이어서 읽고 싶은 책 · 찾아볼 것</li>
   </ul>
 
-  <h2>참고한 것</h2>
-  <ul class="plain">
-    <li>자료 이름 · 출처</li>
-  </ul>
-
-  <p class="notice">이 글은 일반적인 정보입니다. 개별 상담이나 진료를 대신하지 않습니다. 복용 중인 약이 있거나 증상이 이어지면 약사·의사와 직접 상의하세요.</p>
+  <p class="notice">이 글은 개인적인 독서 기록입니다. 모임에서 다른 분들이 한 이야기는 옮기지 않습니다 — 당사자가 읽습니다.</p>
 
   <footer>글짓는 약사 수산나 · 디퍼 언브랜딩 살롱 아카이브</footer>
 </div>

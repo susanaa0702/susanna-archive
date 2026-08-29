@@ -9,22 +9,33 @@
 <link rel="apple-touch-icon" href="../favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F6F4EC;
-  --accent:#2F5D50;
-  --accent-2:#44637F;
-  --point:#C2703D;
-  --point-ink:#A85B2C;
-  --ink:#2B2A26;
-  --muted:#6B6A61;
+  /* 팔레트 "이른 아침 약국" — 2026-08-29. 대비값은 README 참조 */
+  --bg:#F5F8F7;
   --surface:#FFFFFF;
-  --line:rgba(43,42,38,.14);
+  --ink:#22312E;
+  --muted:#5A6B67;
+  --line:#D6E2DF;
+  --line-strong:#B6CBC5;
+  --shadow:rgba(34,49,46,.13);
+  --accent:#0B6E62;          /* 인사이트 — 청록 */
+  --accent-2:#A85520;        /* 과제 — 구운 흙빛 */
+  --accent-3:#7A3E5E;        /* 약사의 자리 — 자두 */
+  --accent-4:#3A5A8C;        /* 독서 기록 — 새벽 남색 */
+  --point:#A85520;
+  --point-ink:#A85520;
+  --tint:rgba(34,49,46,.05);
+  --tint-accent:rgba(11,110,98,.09);
+  --tint-2:rgba(168,85,32,.09);
+  --tint-3:rgba(122,62,94,.10);
+  --tint-4:rgba(58,90,140,.10);
   --font-title:"Gowun Batang", serif;
-  --font-body:"Pretendard","Pretendard Variable","Noto Sans KR",-apple-system,BlinkMacSystemFont,sans-serif;
-  --font-caption:"Gowun Dodum","Noto Sans KR",sans-serif;
+  --font-body:"Nanum Myeongjo", serif;
+  --font-caption:"Gowun Dodum", sans-serif;
 }
+
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
 body{
@@ -93,7 +104,7 @@ p{margin-bottom:1rem}
 }
 .made h3{margin-top:0}
 .made p{font-size:.92rem;color:var(--muted);margin-bottom:.75rem}
-.made a{color:var(--accent-2);font-size:.88rem;font-family:var(--font-caption);text-decoration:none;border-bottom:1px solid rgba(68,99,127,.35)}
+.made a{color:var(--accent-2);font-size:.88rem;font-family:var(--font-caption);text-decoration:none;border-bottom:1px solid var(--accent-2)}
 .made a:hover,.made a:focus-visible{border-bottom-color:var(--accent-2);outline:none}
 .swatches{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.25rem 0}
 .sw{flex:1 1 92px;min-width:92px}
@@ -106,12 +117,12 @@ p{margin-bottom:1rem}
   content:counter(s);
   position:absolute;left:0;top:.55rem;
   width:1.4rem;height:1.4rem;border-radius:50%;
-  background:rgba(47,93,80,.10);color:var(--accent);
+  background:var(--tint-accent);color:var(--accent);
   font-family:var(--font-caption);font-size:.72rem;
   display:flex;align-items:center;justify-content:center;
 }
 .prompt{
-  background:rgba(43,42,38,.045);
+  background:var(--tint);
   border:1px solid var(--line);
   border-radius:10px;
   padding:1rem 1.1rem;
@@ -133,7 +144,7 @@ p{margin-bottom:1rem}
 .reflect strong{display:block;font-family:var(--font-title);font-size:1.02rem;margin-bottom:.15rem}
 .reflect span{font-size:.9rem;color:var(--muted)}
 .blank{
-  border:1px dashed rgba(43,42,38,.3);
+  border:1px dashed var(--line-strong);
   border-radius:10px;
   padding:1rem 1.15rem;
   font-family:var(--font-caption);
@@ -141,7 +152,7 @@ p{margin-bottom:1rem}
   color:var(--muted);
 }
 .agent{
-  background:rgba(47,93,80,.06);
+  background:var(--tint-accent);
   border-radius:12px;
   padding:1.35rem 1.4rem;
   margin-top:1rem;
@@ -164,6 +175,7 @@ footer{
   color:var(--muted);
   text-align:center;
 }
+.later{font-family:var(--font-caption);font-size:.84rem;color:var(--muted);background:var(--tint);border-left:3px solid var(--point);border-radius:0 8px 8px 0;padding:.8rem 1rem;margin:1.25rem 0 2rem}
 </style>
 </head>
 <body>
@@ -192,6 +204,8 @@ footer{
     <div class="sw"><i style="background:#C2703D"></i><span>포인트 #C2703D</span></div>
     <div class="sw"><i style="background:#2B2A26"></i><span>본문 #2B2A26</span></div>
   </div>
+
+  <p class="later">덧 (2026-08-29) — 이 팔레트는 나중에 <strong>"이른 아침 약국"</strong>(배경 #F5F8F7 · 강조 #0B6E62 청록)으로 바꿨습니다. 본문 글꼴도 Noto Sans KR에서 Nanum Myeongjo로 옮겼습니다. 위 다섯 색은 처음 지었을 때의 기록으로 남겨둡니다.</p>
 
   <h2>어떻게 만들었나</h2>
   <p>Claude Code(사막여우)에게 요청서 한 장을 건넸습니다. 코드는 한 줄도 직접 쓰지 않았습니다. 순서는 이랬습니다.</p>
