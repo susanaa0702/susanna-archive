@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>갇힌 여인 2 — 고유한 억양 — 수산나 아카이브</title>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 팔레트 "이른 아침 약국" — 2026-08-29. 대비값은 README 참조 */
+  --bg:#F5F8F7;
+  --surface:#FFFFFF;
+  --ink:#22312E;
+  --muted:#5A6B67;
+  --line:#D6E2DF;
+  --line-strong:#B6CBC5;
+  --shadow:rgba(34,49,46,.13);
+  --accent:#0B6E62;          /* 인사이트 — 청록 */
+  --accent-2:#A85520;        /* 과제 — 구운 흙빛 */
+  --accent-3:#7A3E5E;        /* 약사의 자리 — 자두 */
+  --accent-4:#3A5A8C;        /* 독서 기록 — 새벽 남색 */
+  --point:#A85520;
+  --point-ink:#A85520;
+  --tint:rgba(34,49,46,.05);
+  --tint-accent:rgba(11,110,98,.09);
+  --tint-2:rgba(168,85,32,.09);
+  --tint-3:rgba(122,62,94,.10);
+  --tint-4:rgba(58,90,140,.10);
+  --font-title:"Gowun Batang", serif;
+  --font-body:"Nanum Myeongjo", serif;
+  --font-caption:"Gowun Dodum", sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.8;
+  min-height:100vh;
+  padding:2.25rem 1.25rem 2.5rem;
+}
+.wrap{width:100%;max-width:680px;margin:0 auto}
+.back{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--muted);
+  text-decoration:none;
+  margin-bottom:2.5rem;
+  transition:color .18s ease;
+}
+.back:hover,.back:focus-visible{color:var(--accent-4);outline:none}
+.tag{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.72rem;
+  letter-spacing:.06em;
+  padding:.15rem .6rem;
+  border-radius:999px;
+  background:var(--tint-accent);
+  color:var(--accent);
+  margin-bottom:.6rem;
+}
+h1{
+  font-family:var(--font-title);
+  font-size:clamp(1.75rem,5.6vw,2.25rem);
+  font-weight:700;
+  line-height:1.4;
+  margin-bottom:.75rem;
+}
+.summary{
+  font-family:var(--font-title);
+  font-size:1.02rem;
+  color:var(--accent-4);
+  padding-bottom:2rem;
+  border-bottom:1px solid var(--line);
+  margin-bottom:2.5rem;
+}
+h2{
+  font-family:var(--font-title);
+  font-size:1.3rem;
+  font-weight:700;
+  margin:2.75rem 0 1rem;
+  padding-left:.7rem;
+  border-left:4px solid var(--accent-4);
+}
+h3{
+  font-family:var(--font-body);
+  font-size:1rem;
+  font-weight:700;
+  margin:1.75rem 0 .4rem;
+}
+p{margin-bottom:1rem}
+ul.plain{list-style:none}
+ul.plain li{padding:.6rem 0 .6rem 1.1rem;border-bottom:1px solid var(--line);font-size:.94rem;position:relative}
+ul.plain li:last-child{border-bottom:none}
+ul.plain li::before{content:"·";position:absolute;left:.2rem;color:var(--accent-4)}
+.qa{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:1.2rem 1.3rem;
+  margin-bottom:.85rem;
+}
+.qa h3{margin:0 0 .35rem}
+.qa p{font-size:.92rem;color:var(--muted);margin-bottom:0}
+.notice{
+  font-family:var(--font-caption);
+  font-size:.82rem;
+  color:var(--muted);
+  background:var(--tint-4);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-top:2.5rem;
+}
+.note{
+  font-family:var(--font-caption);
+  font-size:.8rem;
+  color:var(--muted);
+  background:var(--tint-2);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-bottom:2rem;
+}
+footer{
+  margin-top:3rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--font-caption);
+  font-size:.75rem;
+  color:var(--muted);
+  text-align:center;
+}
+blockquote{margin:1.25rem 0;padding:.9rem 1.2rem;background:var(--tint-4);border-left:4px solid var(--accent-4);border-radius:0 10px 10px 0;font-size:.95rem}
+blockquote p:last-child{margin-bottom:0}
+.meta{font-family:var(--font-caption);font-size:.84rem;color:var(--muted);background:var(--tint);border-radius:10px;padding:.85rem 1.1rem;margin-bottom:2rem}
+.meta p{margin-bottom:.35rem}
+.meta p:last-child{margin-bottom:0}
+.tablewrap{overflow-x:auto;margin:1.25rem 0}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--tint-4);font-weight:700}
+code{font-size:.9em;background:var(--tint);padding:.1rem .3rem;border-radius:4px}
+.appendix{margin-top:3.5rem;padding-top:1.75rem;border-top:2px solid var(--line)}
+.appendix h2{font-size:1.15rem}
+.src{font-family:var(--font-caption);font-size:.78rem;color:var(--muted);margin-top:2.5rem}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="./">← 독서 기록</a>
+
+  <p class="tag tag-club">독서모임</p>
+  <h1>갇힌 여인 2 — 고유한 억양</h1>
+  <p class="summary">마르셀 프루스트 『잃어버린 시간을 찾아서 10 · 갇힌 여인 2』(민음사) · 2026-08-21 — 육체는 소멸해도 예술가의 고유한 억양은 작품 속에 남는다.</p>
+
+  <h2>~120p</h2>
+
+  <div class="meta">
+    <p><strong>키워드</strong> — 예술, 불멸, 고유한 억양</p>
+  </div>
+
+  <p>화자에게 끊임없는 의심과 불안을 안겨주었던 뱅퇴유 양과 그녀의 여자친구. 그러나 아이러니하게도 그들은 화자에게 뜻밖의 거대한 선물을 안겨준다. 살아생전 해독 불가능이라 여겨졌던 뱅퇴유의 미완성 유작을 뱅퇴유 양의 여자친구가 집념으로 해독해냈고, 이를 모렐과 그의 음악 친구들이 완벽하게 연주해낸 것이다.</p>
+
+  <p>그 아름다운 칠중주의 선율을 들으며 화자는 비로소 자신의 내면 속에 갇혀 있던 스펙트럼을 외재화하는 경험을 한다. 육체는 소멸할지라도, 예술가의 고유한 억양은 작품 속에 남아 행복과 환희의 세계에서 영원히 살아남아 있음을 알게 된다. 동시에 알베르틴을 향했던 괴로운 의혹과 질투 역시 그녀 때문이 아니라, 실은 결핍되어 있던 자신의 마음이 만들어낸 환영에 불과했음을 깨닫는다.</p>
+
+  <p>이제 그는 그 마음의 자리에 탐색과 질문과 사색으로 채워 고유한 억양을 만들고 자신만의 '천일야화'를 지을 수 있을까</p>
+
+  <h2>p.121~150</h2>
+
+  <div class="meta">
+    <p><strong>키워드</strong> — 선의와 악의, 빙산의 일각, 평판</p>
+  </div>
+
+  <p>샤를뤼스는 귀족으로서의 혈통과 문화적 자부심으로 남의 살롱에서 주인 행세를 한다. 그러나 그가 누리던 높은 평판과 주도권은 베르뒤랭 부인의 간교한 모함에 너무나 맥없이 무너져 내린다. 타인의 시선과 입에 의존하는 평판이라는 가치가 얼마나 허망한지, 그리고 자신의 지배력과 권력을 위협받을 때 드러나는 인간의 악의가 얼마나 섬뜩한지를 프루스트는 더없이 선명하게 보여준다.</p>
+
+  <p>하지만 프루스트는 인간의 성격을 결코 단 하나의 이미지로 고정하지 않는다. 선의와 악의는 동전의 양면처럼 언제나 함께 존재하며, 어느 쪽이 수면 위로 올라올지는 개인의 성향과 상황에 따라 끊임없이 달라진다.</p>
+
+  <p>브리쇼와 샤를뤼스가 동성애에 대해 나누는 대목 역시 충격적이다. 열 명 중 정상인은 서너 명에 불과하며, 심지어 게르망트 대공마저 그렇다니. 우리가 지금 눈으로 보고 귀로 듣는 세상은 빙산의 일각일 뿐이고, 그마저도 진실이 아닐 수 있다는 사실에 소름이 돋는다. 수면 아래에 있는 거대한 빙산을 마주할 때, 과연 어떤 일이 일어날까.</p>
+
+  <p class="src">2026-08-21.</p>
+
+  <p class="notice">이 글은 개인적인 독서 기록입니다. 모임에서 다른 분들이 한 이야기는 옮기지 않습니다 — 당사자가 읽습니다.</p>
+
+  <footer>글짓는 약사 수산나 · 디퍼 언브랜딩 살롱 아카이브</footer>
+</div>
+</body>
+</html>

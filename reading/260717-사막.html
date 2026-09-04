@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>사막 — 광채와 침묵 — 수산나 아카이브</title>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 팔레트 "이른 아침 약국" — 2026-08-29. 대비값은 README 참조 */
+  --bg:#F5F8F7;
+  --surface:#FFFFFF;
+  --ink:#22312E;
+  --muted:#5A6B67;
+  --line:#D6E2DF;
+  --line-strong:#B6CBC5;
+  --shadow:rgba(34,49,46,.13);
+  --accent:#0B6E62;          /* 인사이트 — 청록 */
+  --accent-2:#A85520;        /* 과제 — 구운 흙빛 */
+  --accent-3:#7A3E5E;        /* 약사의 자리 — 자두 */
+  --accent-4:#3A5A8C;        /* 독서 기록 — 새벽 남색 */
+  --point:#A85520;
+  --point-ink:#A85520;
+  --tint:rgba(34,49,46,.05);
+  --tint-accent:rgba(11,110,98,.09);
+  --tint-2:rgba(168,85,32,.09);
+  --tint-3:rgba(122,62,94,.10);
+  --tint-4:rgba(58,90,140,.10);
+  --font-title:"Gowun Batang", serif;
+  --font-body:"Nanum Myeongjo", serif;
+  --font-caption:"Gowun Dodum", sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.8;
+  min-height:100vh;
+  padding:2.25rem 1.25rem 2.5rem;
+}
+.wrap{width:100%;max-width:680px;margin:0 auto}
+.back{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--muted);
+  text-decoration:none;
+  margin-bottom:2.5rem;
+  transition:color .18s ease;
+}
+.back:hover,.back:focus-visible{color:var(--accent-4);outline:none}
+.tag{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.72rem;
+  letter-spacing:.06em;
+  padding:.15rem .6rem;
+  border-radius:999px;
+  background:var(--tint-accent);
+  color:var(--accent);
+  margin-bottom:.6rem;
+}
+h1{
+  font-family:var(--font-title);
+  font-size:clamp(1.75rem,5.6vw,2.25rem);
+  font-weight:700;
+  line-height:1.4;
+  margin-bottom:.75rem;
+}
+.summary{
+  font-family:var(--font-title);
+  font-size:1.02rem;
+  color:var(--accent-4);
+  padding-bottom:2rem;
+  border-bottom:1px solid var(--line);
+  margin-bottom:2.5rem;
+}
+h2{
+  font-family:var(--font-title);
+  font-size:1.3rem;
+  font-weight:700;
+  margin:2.75rem 0 1rem;
+  padding-left:.7rem;
+  border-left:4px solid var(--accent-4);
+}
+h3{
+  font-family:var(--font-body);
+  font-size:1rem;
+  font-weight:700;
+  margin:1.75rem 0 .4rem;
+}
+p{margin-bottom:1rem}
+ul.plain{list-style:none}
+ul.plain li{padding:.6rem 0 .6rem 1.1rem;border-bottom:1px solid var(--line);font-size:.94rem;position:relative}
+ul.plain li:last-child{border-bottom:none}
+ul.plain li::before{content:"·";position:absolute;left:.2rem;color:var(--accent-4)}
+.qa{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:1.2rem 1.3rem;
+  margin-bottom:.85rem;
+}
+.qa h3{margin:0 0 .35rem}
+.qa p{font-size:.92rem;color:var(--muted);margin-bottom:0}
+.notice{
+  font-family:var(--font-caption);
+  font-size:.82rem;
+  color:var(--muted);
+  background:var(--tint-4);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-top:2.5rem;
+}
+.note{
+  font-family:var(--font-caption);
+  font-size:.8rem;
+  color:var(--muted);
+  background:var(--tint-2);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-bottom:2rem;
+}
+footer{
+  margin-top:3rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--font-caption);
+  font-size:.75rem;
+  color:var(--muted);
+  text-align:center;
+}
+blockquote{margin:1.25rem 0;padding:.9rem 1.2rem;background:var(--tint-4);border-left:4px solid var(--accent-4);border-radius:0 10px 10px 0;font-size:.95rem}
+blockquote p:last-child{margin-bottom:0}
+.meta{font-family:var(--font-caption);font-size:.84rem;color:var(--muted);background:var(--tint);border-radius:10px;padding:.85rem 1.1rem;margin-bottom:2rem}
+.meta p{margin-bottom:.35rem}
+.meta p:last-child{margin-bottom:0}
+.tablewrap{overflow-x:auto;margin:1.25rem 0}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--tint-4);font-weight:700}
+code{font-size:.9em;background:var(--tint);padding:.1rem .3rem;border-radius:4px}
+.appendix{margin-top:3.5rem;padding-top:1.75rem;border-top:2px solid var(--line)}
+.appendix h2{font-size:1.15rem}
+.src{font-family:var(--font-caption);font-size:.78rem;color:var(--muted);margin-top:2.5rem}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="./">← 독서 기록</a>
+
+  <p class="tag tag-solo">혼자 읽기</p>
+  <h1>사막 — 광채와 침묵</h1>
+  <p class="summary">J.M.G. 르 클레지오 『사막』 · '사막' 장 · 2026-07-17 — 파멸이 사막을 덮을 때조차 그 침묵은 위엄을 잃지 않았다.</p>
+
+  <div class="meta">
+    <p><strong>키워드</strong> — 사막, 광채, 침묵</p>
+  </div>
+
+  <p>낮에는 모든 것을 집어삼킬 듯 강렬한 태양이 타오르고, 밤에는 뼈 속까지 얼어붙이는 혹독한 냉기가 지배하는 공간, 사막. 그곳은 오직 자연의 냉철한 질서만이 군림하는 땅이자, 아무것도 소유하지 않음으로써 비로소 완벽한 자유를 누리는 유목민, '청색 사람들'의 영혼이 깃든 고향이다. 그러나 그들을 사지로 내몬 것은 가혹한 자연이 아니었다. 탐욕스러운 인간의 물질문명, 그리고 그들이 앞세운 무시무시한 근대식 무기가 유목민들의 터전을 무참히 잠식하기 시작했다. 살아남기 위해, 그들은 최후의 보루이자 영적 지도자 마 엘 아이닌이 있는 성전 '스마라'로 모여든다. 하지만 그곳에서조차 뚜렷한 구원의 방책을 찾지 못한 채, 부족은 다시 북쪽을 향해 길고 지난한 여정을 떠난다. 그것은 새로운 시작이 아닌, 예견된 종말을 향한 길이다.</p>
+
+  <p>한 위대한 문명이 이대로 지상의 사막에서 힘없이 지워지는 것일까? 거대한 파멸과 깊은 침묵이 사막을 덮어올 때, 이 모든 비극과 아름다움을 초자연적인 광채를 지닌 소년, '누르'가 두 눈에 담았다. 성자 마 엘 아이닌과의 눈맞춤, 그리고 그와의 만남을 통해, 누르는 이 사막의 희망이자 구원의 빛이 될 것임을 암시하고 있다.</p>
+
+  <p>사막 유목민의 절체절명의 위기가 거대한 AI시대가 쓰나미처럼 몰려오고 있는 오늘날의 우리와 너무나도 닮아 있다. 그들이 빼앗긴 것이 삶의 터전이었다면, 우리가 잃어가는 것은 설 자리다. 모든 지식과 창작, 심지어 감정의 영역까지 파고드는 어찔한 현실에서, 우리는 점점 그 자리를 내주는 중이다. 이럴수록 더욱더 우리 모두가 스스로 누르가 되어야 하지 않을까. 파멸이 사막을 덮을 때조차 그 침묵이 위엄을 잃지 않았듯, 소음으로 가득한 이 시대에도 지켜야 할 고요가 있다. 몰려오는 거대한 변화를 똑바로 응시하고, 그 속에서도 인간다운 온기 — 성자와 소년의 눈맞춤처럼, 사람이 사람을 알아보는 그 온기 — 를 끝까지 담아낼 수 있는 그 마음의 빛만큼은 잃지 않아야 할 것이다.</p>
+
+  <p class="src">2026-07-17. 같은 책 '행복' 장 서평은 <a href="260814-사막-행복.html">여기</a>.</p>
+
+  <p class="notice">이 글은 개인적인 독서 기록입니다. 인용한 책의 쪽수는 읽은 판본을 기준으로 합니다.</p>
+
+  <footer>글짓는 약사 수산나 · 디퍼 언브랜딩 살롱 아카이브</footer>
+</div>
+</body>
+</html>
