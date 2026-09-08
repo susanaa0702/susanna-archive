@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>키워드가 빈자리를 가리켰다 — 수산나 아카이브</title>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 팔레트 "이른 아침 약국" — 2026-08-29. 대비값은 README 참조 */
+  --bg:#F5F8F7;
+  --surface:#FFFFFF;
+  --ink:#22312E;
+  --muted:#5A6B67;
+  --line:#D6E2DF;
+  --line-strong:#B6CBC5;
+  --shadow:rgba(34,49,46,.13);
+  --accent:#0B6E62;          /* 인사이트 — 청록 */
+  --accent-2:#A85520;        /* 과제 — 구운 흙빛 */
+  --accent-3:#7A3E5E;        /* 약사의 자리 — 자두 */
+  --accent-4:#3A5A8C;        /* 독서 기록 — 새벽 남색 */
+  --point:#A85520;
+  --point-ink:#A85520;
+  --tint:rgba(34,49,46,.05);
+  --tint-accent:rgba(11,110,98,.09);
+  --tint-2:rgba(168,85,32,.09);
+  --tint-3:rgba(122,62,94,.10);
+  --tint-4:rgba(58,90,140,.10);
+  --font-title:"Gowun Batang", serif;
+  --font-body:"Nanum Myeongjo", serif;
+  --font-caption:"Gowun Dodum", sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.8;
+  min-height:100vh;
+  padding:2.25rem 1.25rem 2.5rem;
+}
+.wrap{width:100%;max-width:680px;margin:0 auto}
+.back{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--muted);
+  text-decoration:none;
+  margin-bottom:2.5rem;
+  transition:color .18s ease;
+}
+.back:hover,.back:focus-visible{color:var(--accent);outline:none}
+.date{
+  font-family:var(--font-caption);
+  font-size:.76rem;
+  letter-spacing:.08em;
+  color:var(--point-ink);
+  margin-bottom:.5rem;
+}
+h1{
+  font-family:var(--font-title);
+  font-size:clamp(1.75rem,5.6vw,2.25rem);
+  font-weight:700;
+  line-height:1.4;
+  margin-bottom:.75rem;
+}
+.summary{
+  font-family:var(--font-title);
+  font-size:1.02rem;
+  color:var(--accent);
+  padding-bottom:2rem;
+  border-bottom:1px solid var(--line);
+  margin-bottom:2.5rem;
+}
+h2{
+  font-family:var(--font-title);
+  font-size:1.3rem;
+  font-weight:700;
+  margin:2.75rem 0 1rem;
+  padding-left:.7rem;
+  border-left:4px solid var(--accent);
+}
+h3{
+  font-family:var(--font-body);
+  font-size:1rem;
+  font-weight:700;
+  margin:1.75rem 0 .4rem;
+}
+p{margin-bottom:1rem}
+.made{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-top:3px solid var(--point);
+  border-radius:12px;
+  padding:1.35rem 1.4rem;
+  margin-bottom:1rem;
+}
+.made h3{margin-top:0}
+.made p{font-size:.92rem;color:var(--muted);margin-bottom:.75rem}
+.made a{color:var(--accent-2);font-size:.88rem;font-family:var(--font-caption);text-decoration:none;border-bottom:1px solid var(--accent-2)}
+.made a:hover,.made a:focus-visible{border-bottom-color:var(--accent-2);outline:none}
+figure{margin:1.25rem 0}
+figure img{width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+figcaption{font-family:var(--font-caption);font-size:.78rem;color:var(--muted);margin-top:.5rem}
+.prompt{
+  background:var(--tint);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:1rem 1.1rem;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:.83rem;
+  line-height:1.7;
+  color:var(--ink);
+  white-space:pre-wrap;
+  word-break:break-word;
+  overflow-x:auto;
+  margin-bottom:1rem;
+}
+.reflect{list-style:none;margin-top:.5rem}
+.reflect li{
+  padding:.85rem 0;
+  border-bottom:1px solid var(--line);
+}
+.reflect li:last-child{border-bottom:none}
+.reflect strong{display:block;font-family:var(--font-title);font-size:1.02rem;margin-bottom:.15rem}
+.reflect span{font-size:.9rem;color:var(--muted)}
+.agent{
+  background:var(--tint-accent);
+  border-radius:12px;
+  padding:1.35rem 1.4rem;
+  margin-top:1rem;
+}
+.agent p{font-size:.92rem;margin-bottom:.75rem}
+.agent p:last-child{margin-bottom:0}
+.agent .who{
+  font-family:var(--font-caption);
+  font-size:.74rem;
+  letter-spacing:.1em;
+  color:var(--accent);
+  margin-bottom:.6rem;
+}
+.note{
+  font-family:var(--font-caption);
+  font-size:.8rem;
+  color:var(--muted);
+  background:var(--tint-2);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-bottom:2rem;
+}
+footer{
+  margin-top:4rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--font-caption);
+  font-size:.75rem;
+  color:var(--muted);
+  text-align:center;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="./">← 인사이트</a>
+
+  <p class="date">2026.09.08</p>
+  <h1>키워드가 빈자리를 가리켰다</h1>
+  <p class="summary">서평을 쓰고 키워드를 셋 적었는데, 본문이 받은 것은 하나뿐이었다. 한 줄을 더하자 글에 이미 있던 별이 셋으로 이어졌다.</p>
+
+  <h2>만든 것</h2>
+
+  <div class="made">
+    <h3>어려운 시절 — 저장</h3>
+    <p>찰스 디킨스 『어려운 시절』 제3권 「저장」 서평. 혼자 읽고 쓴 독서 기록이다.</p>
+    <a href="../reading/260908-어려운시절-3권.html">독서 기록에서 보기</a>
+  </div>
+
+  <h2>어떻게 만들었나</h2>
+
+  <p>서평을 쓸 때는 키워드를 먼저 적는다. 이번에 적은 것은 셋이었다 — 가슴의 지혜, 사랑과 감사, 용서.</p>
+
+  <p>다 쓰고 보니 셋이 고르게 들어와 있지 않았다. 용서는 한 문단을 통째로 받고 있었다. 스티븐이 죽어가면서도 자신을 모함한 자들을 용서하고, 세상 사람들이 서로 이해하며 지내기를 바라며 기도하는 대목이다. 그런데 앞의 둘은 제목 줄에만 있었다. 본문 어디에도 자리가 없었다.</p>
+
+  <p>가슴의 지혜와 사랑과 감사가 있을 자리는 시시였다. 머리의 지혜만 중요시했던 그래드그라인드 씨에게 가슴의 지혜를 일깨우고, 사랑과 감사라는 빛으로 그 집의 어둠을 물리치게 해준 사람. 그 한 줄을 더했다.</p>
+
+  <p>그러자 글이 달라졌다. 넣기 전에는 몰랐는데, 이 글에는 이미 별이 두 번 나오고 있었다. 스티븐이 깊은 어둠 속에서 발견한 구원의 별, 그리고 마지막에 만나러 나가는 그 별빛. 시시를 별이라고 부르고 나니 셋이 한 줄로 이어졌다. 어둠 속에서 발견한 별, 어둠을 물리친 별, 내가 보러 나가는 별.</p>
+
+  <h2>배운 것</h2>
+  <ul class="reflect">
+    <li>
+      <strong>키워드는 요약이 아니었다</strong>
+      <span>다 쓰고 나서 붙이는 이름표인 줄 알았는데, 본문이 아직 받지 못한 자리를 가리키고 있었다.</span>
+    </li>
+    <li>
+      <strong>없던 것을 넣은 게 아니다</strong>
+      <span>새 이야기를 지어 넣은 게 아니라, 이미 써둔 것들이 서로 닿도록 한 줄을 놓았을 뿐이다.</span>
+    </li>
+    <li>
+      <strong>빈자리는 내가 적어둔 것이 알려준다</strong>
+      <span>다음에도 다 쓰고 나면 키워드를 하나씩 본문에 대어 보려고 한다.</span>
+    </li>
+  </ul>
+
+  <footer>글짓는 약사 수산나 · 디퍼 언브랜딩 살롱 아카이브</footer>
+</div>
+</body>
+</html>
