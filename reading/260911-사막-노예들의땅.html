@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>사막 — 노예들의 땅에서 — 수산나 아카이브</title>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 팔레트 "이른 아침 약국" — 2026-08-29. 대비값은 README 참조 */
+  --bg:#F5F8F7;
+  --surface:#FFFFFF;
+  --ink:#22312E;
+  --muted:#5A6B67;
+  --line:#D6E2DF;
+  --line-strong:#B6CBC5;
+  --shadow:rgba(34,49,46,.13);
+  --accent:#0B6E62;          /* 인사이트 — 청록 */
+  --accent-2:#A85520;        /* 과제 — 구운 흙빛 */
+  --accent-3:#7A3E5E;        /* 약사의 자리 — 자두 */
+  --accent-4:#3A5A8C;        /* 독서 기록 — 새벽 남색 */
+  --point:#A85520;
+  --point-ink:#A85520;
+  --tint:rgba(34,49,46,.05);
+  --tint-accent:rgba(11,110,98,.09);
+  --tint-2:rgba(168,85,32,.09);
+  --tint-3:rgba(122,62,94,.10);
+  --tint-4:rgba(58,90,140,.10);
+  --font-title:"Gowun Batang", serif;
+  --font-body:"Nanum Myeongjo", serif;
+  --font-caption:"Gowun Dodum", sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.8;
+  min-height:100vh;
+  padding:2.25rem 1.25rem 2.5rem;
+}
+.wrap{width:100%;max-width:680px;margin:0 auto}
+.back{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--muted);
+  text-decoration:none;
+  margin-bottom:2.5rem;
+  transition:color .18s ease;
+}
+.back:hover,.back:focus-visible{color:var(--accent-4);outline:none}
+.tag{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.72rem;
+  letter-spacing:.06em;
+  padding:.15rem .6rem;
+  border-radius:999px;
+  background:var(--tint-accent);
+  color:var(--accent);
+  margin-bottom:.6rem;
+}
+h1{
+  font-family:var(--font-title);
+  font-size:clamp(1.75rem,5.6vw,2.25rem);
+  font-weight:700;
+  line-height:1.4;
+  margin-bottom:.75rem;
+}
+.summary{
+  font-family:var(--font-title);
+  font-size:1.02rem;
+  color:var(--accent-4);
+  padding-bottom:2rem;
+  border-bottom:1px solid var(--line);
+  margin-bottom:2.5rem;
+}
+h2{
+  font-family:var(--font-title);
+  font-size:1.3rem;
+  font-weight:700;
+  margin:2.75rem 0 1rem;
+  padding-left:.7rem;
+  border-left:4px solid var(--accent-4);
+}
+h3{
+  font-family:var(--font-body);
+  font-size:1rem;
+  font-weight:700;
+  margin:1.75rem 0 .4rem;
+}
+p{margin-bottom:1rem}
+ul.plain{list-style:none}
+ul.plain li{padding:.6rem 0 .6rem 1.1rem;border-bottom:1px solid var(--line);font-size:.94rem;position:relative}
+ul.plain li:last-child{border-bottom:none}
+ul.plain li::before{content:"·";position:absolute;left:.2rem;color:var(--accent-4)}
+.qa{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:1.2rem 1.3rem;
+  margin-bottom:.85rem;
+}
+.qa h3{margin:0 0 .35rem}
+.qa p{font-size:.92rem;color:var(--muted);margin-bottom:0}
+.notice{
+  font-family:var(--font-caption);
+  font-size:.82rem;
+  color:var(--muted);
+  background:var(--tint-4);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-top:2.5rem;
+}
+.note{
+  font-family:var(--font-caption);
+  font-size:.8rem;
+  color:var(--muted);
+  background:var(--tint-2);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-bottom:2rem;
+}
+footer{
+  margin-top:3rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--font-caption);
+  font-size:.75rem;
+  color:var(--muted);
+  text-align:center;
+}
+blockquote{margin:1.25rem 0;padding:.9rem 1.2rem;background:var(--tint-4);border-left:4px solid var(--accent-4);border-radius:0 10px 10px 0;font-size:.95rem}
+blockquote p:last-child{margin-bottom:0}
+.meta{font-family:var(--font-caption);font-size:.84rem;color:var(--muted);background:var(--tint);border-radius:10px;padding:.85rem 1.1rem;margin-bottom:2rem}
+.meta p{margin-bottom:.35rem}
+.meta p:last-child{margin-bottom:0}
+.tablewrap{overflow-x:auto;margin:1.25rem 0}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--tint-4);font-weight:700}
+code{font-size:.9em;background:var(--tint);padding:.1rem .3rem;border-radius:4px}
+.appendix{margin-top:3.5rem;padding-top:1.75rem;border-top:2px solid var(--line)}
+.appendix h2{font-size:1.15rem}
+.src{font-family:var(--font-caption);font-size:.78rem;color:var(--muted);margin-top:2.5rem}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="./">← 독서 기록</a>
+
+  <p class="tag tag-solo">혼자 읽기</p>
+  <h1>사막 — 노예들의 땅에서</h1>
+  <p class="summary">J.M.G. 르 클레지오 『사막』 · '노예들의 땅에서' 장 · 2026-09-11 — 아무것도 없지만 모든 것을 품을 수 있었던 사막, 모든 것이 넘쳐나지만 결코 아무것도 소유할 수 없는 도시.</p>
+
+  <div class="meta">
+    <p><strong>키워드</strong> — 공허, 자유에로의 길, 불멸의 시선</p>
+  </div>
+
+  <p>무자비한 학살 뒤 살아남은 청색 인간들이 죽은 투사들을 묻어주는 장면에서 눈물이 멈추지 않았다. 그들이 원한 것은 그저 자신들의 땅에서 자유롭게 살아가는 것뿐이었다. 종교를 빙자하여 황금에 눈먼 인간들의 탐욕이 섬뜩할 만큼 무섭게 다가온다.</p>
+
+  <p>그러나 아무리 총칼로 짓밟고 무너뜨려도 결코 사라지지 않는 것이 있다. 그것은 바로 자연이다. 자연은 모든 것을 묵묵히 견뎌내며 그 자리를 지킨다. 그리고 그 자연의 질서를 따르며 자신의 삶을 지켜내는 이들에게 무한한 자유와 불멸의 정신을 선물한다. 마 엘 아이닌의 영혼은 '불멸의 시선'이 되어 지금도 사막 속에서 살아 숨 쉬고 있다.</p>
+
+  <p>랄라는 그 시선을 온몸으로 느끼고 있었다. 그러나 도망치듯 떠나와 닿은 도시에서는 그 시선을 어디에서도 찾을 수 없었다. 도시에는 오직 공허와 두려움만이 감돌았고, 도처에 죽음의 그림자가 깔려 있을 뿐이었다. 심지어 햇살마저 차갑게 느껴졌다.</p>
+
+  <p>아무것도 없지만 모든 것을 품을 수 있었던 사막, 모든 것이 넘쳐나지만 결코 아무것도 소유할 수 없는 도시. 결국 랄라는 다시 사막을 향해 자유로의 길을 떠난다. 그리고 그곳에서 딸을 낳으며, 청색 인간들의 삶과 정신이 결코 사라지지 않았음을 보여준다.</p>
+
+  <p>그런데 작가는 왜 이 작품의 마지막을 청색 인간들의 슬픈 역사로 끝맺었을까? 랄라가 출산하는 희망적인 장면으로 끝났다면 마음이 이토록 먹먹하진 않았을 텐데 말이다. 아마 새로운 생명의 희망 속에서 그 처참했던 비극이 잊히거나 희석되지 않기를 바랐기 때문이 아닐까. 더불어 오늘날 세계 곳곳에서 여전히 되풀이되고 있는 비극을 향한 비판과 경고를 함께 던지면서 말이다.</p>
+
+  <p class="src">2026-09-11. 같은 책 '사막' 장 서평은 <a href="260717-사막.html">여기</a>, '행복' 장 서평은 <a href="260814-사막-행복.html">여기</a>.</p>
+
+  <p class="notice">이 글은 개인적인 독서 기록입니다. 인용한 책의 쪽수는 읽은 판본을 기준으로 합니다.</p>
+
+  <footer>글짓는 약사 수산나 · 디퍼 언브랜딩 살롱 아카이브</footer>
+</div>
+</body>
+</html>
