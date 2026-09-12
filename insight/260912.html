@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>서 있지 않고 앉아 있었다는 것 — 수산나 아카이브</title>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 팔레트 "이른 아침 약국" — 2026-08-29. 대비값은 README 참조 */
+  --bg:#F5F8F7;
+  --surface:#FFFFFF;
+  --ink:#22312E;
+  --muted:#5A6B67;
+  --line:#D6E2DF;
+  --line-strong:#B6CBC5;
+  --shadow:rgba(34,49,46,.13);
+  --accent:#0B6E62;          /* 인사이트 — 청록 */
+  --accent-2:#A85520;        /* 과제 — 구운 흙빛 */
+  --accent-3:#7A3E5E;        /* 약사의 자리 — 자두 */
+  --accent-4:#3A5A8C;        /* 독서 기록 — 새벽 남색 */
+  --point:#A85520;
+  --point-ink:#A85520;
+  --tint:rgba(34,49,46,.05);
+  --tint-accent:rgba(11,110,98,.09);
+  --tint-2:rgba(168,85,32,.09);
+  --tint-3:rgba(122,62,94,.10);
+  --tint-4:rgba(58,90,140,.10);
+  --font-title:"Gowun Batang", serif;
+  --font-body:"Nanum Myeongjo", serif;
+  --font-caption:"Gowun Dodum", sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.8;
+  min-height:100vh;
+  padding:2.25rem 1.25rem 2.5rem;
+}
+.wrap{width:100%;max-width:680px;margin:0 auto}
+.back{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--muted);
+  text-decoration:none;
+  margin-bottom:2.5rem;
+  transition:color .18s ease;
+}
+.back:hover,.back:focus-visible{color:var(--accent);outline:none}
+.date{
+  font-family:var(--font-caption);
+  font-size:.76rem;
+  letter-spacing:.08em;
+  color:var(--point-ink);
+  margin-bottom:.5rem;
+}
+h1{
+  font-family:var(--font-title);
+  font-size:clamp(1.75rem,5.6vw,2.25rem);
+  font-weight:700;
+  line-height:1.4;
+  margin-bottom:.75rem;
+}
+.summary{
+  font-family:var(--font-title);
+  font-size:1.02rem;
+  color:var(--accent);
+  padding-bottom:2rem;
+  border-bottom:1px solid var(--line);
+  margin-bottom:2.5rem;
+}
+h2{
+  font-family:var(--font-title);
+  font-size:1.3rem;
+  font-weight:700;
+  margin:2.75rem 0 1rem;
+  padding-left:.7rem;
+  border-left:4px solid var(--accent);
+}
+h3{
+  font-family:var(--font-body);
+  font-size:1rem;
+  font-weight:700;
+  margin:1.75rem 0 .4rem;
+}
+p{margin-bottom:1rem}
+.made{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-top:3px solid var(--point);
+  border-radius:12px;
+  padding:1.35rem 1.4rem;
+  margin-bottom:1rem;
+}
+.made h3{margin-top:0}
+.made p{font-size:.92rem;color:var(--muted);margin-bottom:.75rem}
+.made a{color:var(--accent-2);font-size:.88rem;font-family:var(--font-caption);text-decoration:none;border-bottom:1px solid var(--accent-2)}
+.made a:hover,.made a:focus-visible{border-bottom-color:var(--accent-2);outline:none}
+figure{margin:1.25rem 0}
+figure img{width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+figcaption{font-family:var(--font-caption);font-size:.78rem;color:var(--muted);margin-top:.5rem}
+.prompt{
+  background:var(--tint);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:1rem 1.1rem;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:.83rem;
+  line-height:1.7;
+  color:var(--ink);
+  white-space:pre-wrap;
+  word-break:break-word;
+  overflow-x:auto;
+  margin-bottom:1rem;
+}
+.reflect{list-style:none;margin-top:.5rem}
+.reflect li{
+  padding:.85rem 0;
+  border-bottom:1px solid var(--line);
+}
+.reflect li:last-child{border-bottom:none}
+.reflect strong{display:block;font-family:var(--font-title);font-size:1.02rem;margin-bottom:.15rem}
+.reflect span{font-size:.9rem;color:var(--muted)}
+.agent{
+  background:var(--tint-accent);
+  border-radius:12px;
+  padding:1.35rem 1.4rem;
+  margin-top:1rem;
+}
+.agent p{font-size:.92rem;margin-bottom:.75rem}
+.agent p:last-child{margin-bottom:0}
+.agent .who{
+  font-family:var(--font-caption);
+  font-size:.74rem;
+  letter-spacing:.1em;
+  color:var(--accent);
+  margin-bottom:.6rem;
+}
+.note{
+  font-family:var(--font-caption);
+  font-size:.8rem;
+  color:var(--muted);
+  background:var(--tint-2);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-bottom:2rem;
+}
+footer{
+  margin-top:4rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--font-caption);
+  font-size:.75rem;
+  color:var(--muted);
+  text-align:center;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="./">← 인사이트</a>
+
+  <p class="date">2026.09.12</p>
+  <h1>서 있지 않고 앉아 있었다는 것</h1>
+  <p class="summary">한 여자가 앉아 있었다는 사실 하나로 운명이 갈리는 문장을 두 사람이 같이 골랐다. 나쁜 만남을 읽으며 좋은 만남을 확인한 아침.</p>
+
+  <h2>만든 것</h2>
+
+  <div class="made">
+    <h3>레미제라블 — 지혜인가요, 비겁함이지</h3>
+    <p>빅토르 위고 『레미제라블』 독서모임 9회. 「톨로미에스의 지혜」부터 「위탁은 때로 버림이다」 1장까지 함께 읽은 범위를 내가 읽은 대로 정리한 기록이다.</p>
+    <a href="../reading/260912-레미제라블-9회.html">독서 기록에서 보기</a>
+  </div>
+
+  <h2>어떻게 만들었나</h2>
+
+  <p>오늘은 제목들이 눈에 들어왔다. 「톨로미에스의 지혜」 — 지혜인가요? 비겁함이지. 잘난 척은 다 해 놓고 결국 줄행랑친 것이고, 책임질 아이가 있는데 나 몰라라 한다. 그리고 「위탁은 때로 버림이다」. 제목과 내용이 어긋나는 자리에 위고의 눈이 있다.</p>
+
+  <p>그런데 나눔에서 나를 붙든 것은 제목이 아니라 273쪽의 한 문장이었다. 한 여자가 서 있지 않고 앉아 있었다는 이 한 가지의 사실만으로도 인간의 운명은 좌우되는 것이다. 같은 문장을 고른 이가 또 있었다.</p>
+
+  <p>팡틴에게 온 만남은 둘 다 나빴다. 톨로미에스와, 서 있지 않고 앉아 있던 여자. 어떻게 한 장면을 보고 딸아이를 그렇게 맡길까 싶은데, 너무 착하면 삶이 힘들어진다는 것을 우리도 안다. 우리는 팡틴의 삶이 어떻게 되는지 다 아니까 더 비참하게 읽힌다.</p>
+
+  <p>그 문장 앞에서 우리 모임을 생각했다. 실제로 얼굴을 본 것은 한 번뿐인데, 책으로 만나고 서로 내면을 이야기했기 때문에 좀 더 오래 가는 게 아닌가. 나쁜 만남을 읽으며 좋은 만남을 확인한 아침이었다.</p>
+
+  <h2>배운 것</h2>
+  <ul class="reflect">
+    <li>
+      <strong>앉아 있었다는 사실 하나</strong>
+      <span>지난주의 「인류에 사소한 일은 없다」가 이번엔 한 사람의 운명 위에 떨어졌다.</span>
+    </li>
+    <li>
+      <strong>제목과 내용이 어긋나는 자리</strong>
+      <span>위고가 「지혜」라 이름 붙인 장에서 톨로미에스는 줄행랑친다. 「위탁은 때로 버림이다」도 같은 모양이다.</span>
+    </li>
+    <li>
+      <strong>만남이 운명을 가른다</strong>
+      <span>얼굴을 본 것은 한 번뿐인데, 책으로 만나고 서로 내면을 이야기했기 때문에 오래 간다.</span>
+    </li>
+  </ul>
+
+  <footer>글짓는 약사 수산나 · 디퍼 언브랜딩 살롱 아카이브</footer>
+</div>
+</body>
+</html>

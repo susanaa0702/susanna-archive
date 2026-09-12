@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>레미제라블 — 지혜인가요, 비겁함이지 · 수산나 아카이브</title>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 팔레트 "이른 아침 약국" — 2026-08-29. 대비값은 README 참조 */
+  --bg:#F5F8F7;
+  --surface:#FFFFFF;
+  --ink:#22312E;
+  --muted:#5A6B67;
+  --line:#D6E2DF;
+  --line-strong:#B6CBC5;
+  --shadow:rgba(34,49,46,.13);
+  --accent:#0B6E62;          /* 인사이트 — 청록 */
+  --accent-2:#A85520;        /* 과제 — 구운 흙빛 */
+  --accent-3:#7A3E5E;        /* 약사의 자리 — 자두 */
+  --accent-4:#3A5A8C;        /* 독서 기록 — 새벽 남색 */
+  --point:#A85520;
+  --point-ink:#A85520;
+  --tint:rgba(34,49,46,.05);
+  --tint-accent:rgba(11,110,98,.09);
+  --tint-2:rgba(168,85,32,.09);
+  --tint-3:rgba(122,62,94,.10);
+  --tint-4:rgba(58,90,140,.10);
+  --font-title:"Gowun Batang", serif;
+  --font-body:"Nanum Myeongjo", serif;
+  --font-caption:"Gowun Dodum", sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.8;
+  min-height:100vh;
+  padding:2.25rem 1.25rem 2.5rem;
+}
+.wrap{width:100%;max-width:680px;margin:0 auto}
+.back{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--muted);
+  text-decoration:none;
+  margin-bottom:2.5rem;
+  transition:color .18s ease;
+}
+.back:hover,.back:focus-visible{color:var(--accent-4);outline:none}
+.tag{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.72rem;
+  letter-spacing:.06em;
+  padding:.15rem .6rem;
+  border-radius:999px;
+  background:var(--tint-accent);
+  color:var(--accent);
+  margin-bottom:.6rem;
+}
+h1{
+  font-family:var(--font-title);
+  font-size:clamp(1.75rem,5.6vw,2.25rem);
+  font-weight:700;
+  line-height:1.4;
+  margin-bottom:.75rem;
+}
+.summary{
+  font-family:var(--font-title);
+  font-size:1.02rem;
+  color:var(--accent-4);
+  padding-bottom:2rem;
+  border-bottom:1px solid var(--line);
+  margin-bottom:2.5rem;
+}
+h2{
+  font-family:var(--font-title);
+  font-size:1.3rem;
+  font-weight:700;
+  margin:2.75rem 0 1rem;
+  padding-left:.7rem;
+  border-left:4px solid var(--accent-4);
+}
+h3{
+  font-family:var(--font-body);
+  font-size:1rem;
+  font-weight:700;
+  margin:1.75rem 0 .4rem;
+}
+p{margin-bottom:1rem}
+ul.plain{list-style:none}
+ul.plain li{padding:.6rem 0 .6rem 1.1rem;border-bottom:1px solid var(--line);font-size:.94rem;position:relative}
+ul.plain li:last-child{border-bottom:none}
+ul.plain li::before{content:"·";position:absolute;left:.2rem;color:var(--accent-4)}
+.qa{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:1.2rem 1.3rem;
+  margin-bottom:.85rem;
+}
+.qa h3{margin:0 0 .35rem}
+.qa p{font-size:.92rem;color:var(--muted);margin-bottom:0}
+.notice{
+  font-family:var(--font-caption);
+  font-size:.82rem;
+  color:var(--muted);
+  background:var(--tint-4);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-top:2.5rem;
+}
+.note{
+  font-family:var(--font-caption);
+  font-size:.8rem;
+  color:var(--muted);
+  background:var(--tint-2);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-bottom:2rem;
+}
+footer{
+  margin-top:3rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--font-caption);
+  font-size:.75rem;
+  color:var(--muted);
+  text-align:center;
+}
+blockquote{margin:1.25rem 0;padding:.9rem 1.2rem;background:var(--tint-4);border-left:4px solid var(--accent-4);border-radius:0 10px 10px 0;font-size:.95rem}
+blockquote p:last-child{margin-bottom:0}
+.meta{font-family:var(--font-caption);font-size:.84rem;color:var(--muted);background:var(--tint);border-radius:10px;padding:.85rem 1.1rem;margin-bottom:2rem}
+.meta p{margin-bottom:.35rem}
+.meta p:last-child{margin-bottom:0}
+.tablewrap{overflow-x:auto;margin:1.25rem 0}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{border:1px solid var(--line);padding:.5rem .7rem;text-align:left;vertical-align:top}
+th{background:var(--tint-4);font-weight:700}
+code{font-size:.9em;background:var(--tint);padding:.1rem .3rem;border-radius:4px}
+.appendix{margin-top:3.5rem;padding-top:1.75rem;border-top:2px solid var(--line)}
+.appendix h2{font-size:1.15rem}
+.src{font-family:var(--font-caption);font-size:.78rem;color:var(--muted);margin-top:2.5rem}
+
+</style>
+</head>
+<body>
+<body>
+<div class="wrap">
+  <a class="back" href="./">← 독서 기록</a>
+
+  <p class="tag tag-club">독서모임</p>
+  <h1>레미제라블 — 지혜인가요, 비겁함이지</h1>
+  <p class="summary">빅토르 위고 『레미제라블』 1부 팡틴 · 3권 「1817년에」 「톨로미에스의 지혜」~4권 「위탁은 때로 버림이다」 1장 · 2026-09-12 — 제목이 먼저 눈에 들어온 날.</p>
+
+  <div class="meta">
+    <p><strong>읽은 범위</strong> — 243~278쪽. 1부 팡틴 3권 「1817년에」 「톨로미에스의 지혜」부터 4권 「위탁은 때로 버림이다」 1장까지.</p>
+    <p><strong>판본 주의</strong> — 판본에 따라 쪽수가 다르다. 이 기록의 쪽수는 내가 읽은 판본을 기준으로 적는다.</p>
+  </div>
+
+  <h2>줄거리 — 뜻밖의 선물</h2>
+
+  <p>톨로미에스가 잔치 자리에서 긴 연설을 한다. 절제를 말하고, 여자를 믿지 말라 하고, 제 이름을 두고는 「이름도 틀릴 수가 있다」고 한다. 그러다 남자 넷이 「뜻밖의 선물」을 남기고 줄지어 나간다. 한 시간 뒤 급사가 들고 온 것은 편지 한 장이다 — 우리는 의무와 질서 속으로 돌아가니 속히 우리를 대신할 사람을 찾으라는.</p>
+
+  <p>열 달이 흐른다. 팡틴은 외톨이가 되고, 아이 아버지는 떠났고, 하찮은 직업을 멸시하게 된 탓에 일자리도 잃는다. 글자를 읽을 줄은 알았으나 쓰지는 못해 대서인에게 부탁해 편지를 세 통 보내지만 답은 없다. 톨로미에스는 이십 년 뒤 지방의 부유한 거물급 변호사가 되어 있을 것이다.</p>
+
+  <p>4권 「위탁은 때로 버림이다」. 몽페르메유의 여인숙 앞에서 한 여자가 앉아 두 아이를 흔들어 주고 있다. 아이를 업고 고향으로 가던 팡틴이 그 앞에 멈춘다. 코제트를 맡기고 떠나는 자리에서 멈췄다.</p>
+
+  <h2>읽으며 생각한 것</h2>
+
+  <p>오늘은 제목들이 눈에 들어왔다. 「톨로미에스의 지혜」, 그리고 「위탁은 때로 버림이다」.</p>
+
+  <p><strong>지혜인가요? 비겁함이지.</strong> 잘난 척은 다 해 놓고 선물을 줄 거라더니 결국 줄행랑친 것이고, 책임질 아이가 있는데 나 몰라라 한다. 더 황당한 건 그런 사람이 이십 년 뒤에 거물급 인사가 된다는 것. 우리는 팡틴의 삶이 어떻게 되는지 다 아니까 더 비참하게 읽힌다.</p>
+
+  <blockquote><p>한 여자가 서 있지 않고 앉아 있었다는 이 한 가지의 사실만으로도 인간의 운명은 좌우되는 것이다. <span class="src" style="margin:0">— 273쪽</span></p></blockquote>
+
+  <p>이 문장 앞에서 만남을 생각했다. 우리 모임도 그렇다 — 실제로 얼굴을 본 것은 한 번뿐인데, 책으로 만나고 서로 내면을 이야기했기 때문에 좀 더 오래 가는 게 아닌가.</p>
+
+  <p><strong>가난과 교육이 없었다는 이유, 이 두 가지가 이렇게까지 한 여자 인생을 망가뜨리나</strong> 싶었다. 그리고 팡틴이 너무 순진하다 — 어떻게 한 장면을 보고 딸아이를 그렇게 맡길까, 우리가 생각할 때 너무 무모한 짓 아닌가. 톨로미에스가 「순수하고 수녀가 될 여자」라고 했던 것처럼, 그 남자도 그래서 팡틴을 골랐을 것이다. 다른 여자들은 이 남자들이 평생 갈 사람이 아니라는 걸 알고 쿨하게 떠났는데 팡틴 혼자 아이까지 낳았다.</p>
+
+  <p>너무 착하면 삶이 힘들어진다는 것을 우리도 안다. 마음이 많이 아프고, 다음 시간에는 더 아플 것 같아 무거운 아침이다.</p>
+
+  <h2>남는 물음</h2>
+  <ul class="plain">
+    <li>「한 여자가 서 있지 않고 앉아 있었다는 이 한 가지의 사실」 — 지난주의 「인류에 사소한 일은 없다」가 이번엔 한 사람의 운명 위에 떨어졌다. 내 인생에서 앉아 있었다는 것만으로 방향을 바꾼 자리는 어디였나.</li>
+    <li>위탁과 버림 사이. 나는 맡긴다고 하면서 놓아 버린 것이 있나 — 사람이든 일이든.</li>
+    <li>톨로미에스는 제 비겁함을 「지혜」라 불렀다. 내가 내 행동에 붙여 놓은 이름 가운데 남이 보면 다른 이름인 것은 무엇인가.</li>
+  </ul>
+
+  <h2>다음에 읽을 곳</h2>
+  <p>4권 「위탁은 때로 버림이다」 2장부터. 팡틴이 떠난 뒤, 코제트가 남은 여인숙에서 이야기가 이어지는 자리다.</p>
+
+  <p class="src">2026-09-12. 독서모임 9회에서 함께 읽은 범위를 내가 읽은 대로 정리한 기록.</p>
+
+  <p class="notice">이 글은 개인적인 독서 기록입니다. 모임에서 다른 분들이 한 이야기는 옮기지 않습니다 — 당사자가 읽습니다. 쪽수는 내가 읽은 판본을 기준으로 합니다.</p>
+
+  <footer>글짓는 약사 수산나 · 디퍼 언브랜딩 살롱 아카이브</footer>
+</div>
+</body>
+</html>
