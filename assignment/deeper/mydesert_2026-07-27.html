@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>수산나님이 건너온 사막 · 문법의 달 결산</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0F2D1F; --ink:#FBF7EE; --gold:#E2C77B; --gold-d:#C9A44C;
+    --card:rgba(251,247,238,.045); --cardline:rgba(226,199,123,.18);
+    --rule:rgba(226,199,123,.25);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Noto Sans KR",-apple-system,BlinkMacSystemFont,sans-serif;
+    word-break:keep-all;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .serif{font-family:"Noto Serif KR","Noto Sans KR",serif}
+  .wrap{max-width:680px;margin:0 auto;padding:0 22px}
+  svg{max-width:100%;height:auto;display:block;margin:0 auto}
+
+  /* 1. 브랜드 밴드 */
+  .band{background:#FBF7EE;padding:20px 0;text-align:center}
+  .band img{height:36px;width:auto;display:inline-block}
+
+  /* 2. 머리 */
+  header{padding:52px 0 40px;text-align:center}
+  .brow{font-size:11px;letter-spacing:.34em;color:var(--gold);text-transform:uppercase;margin-bottom:20px}
+  h1{font-family:"Noto Serif KR",serif;font-weight:400;font-size:30px;line-height:1.5;margin:0 0 16px;color:var(--ink)}
+  .period{font-size:13px;color:rgba(251,247,238,.5);letter-spacing:.05em}
+
+  section{padding:40px 0}
+  .label{font-size:11px;letter-spacing:.26em;color:var(--gold);text-align:center;margin-bottom:22px}
+  .cap{font-size:12.5px;color:rgba(251,247,238,.45);text-align:center;margin-top:16px;letter-spacing:.02em}
+
+  /* 3. 북극성 */
+  .axis{font-family:"Noto Serif KR",serif;font-size:20px;line-height:1.85;text-align:center;
+    max-width:560px;margin:6px auto 0;color:var(--ink)}
+
+  /* 4. 별 문장 */
+  .starline{font-family:"Noto Serif KR",serif;font-style:italic;font-size:14.5px;
+    text-align:center;color:rgba(251,247,238,.72);margin-top:20px;line-height:1.8}
+  .starline b{color:var(--gold);font-weight:400;font-style:normal;font-size:12px;letter-spacing:.06em}
+
+  /* 5. 숫자 띠 */
+  .strip{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+    display:grid;grid-template-columns:repeat(4,1fr);padding:26px 0;margin:8px 0}
+  .stat{text-align:center;padding:6px 4px}
+  .stat .n{font-family:"Noto Serif KR",serif;font-size:30px;color:var(--gold);line-height:1.2;display:block}
+  .stat .n small{font-size:15px;color:var(--gold-d)}
+  .stat .t{font-size:11.5px;color:rgba(251,247,238,.5);letter-spacing:.08em;margin-top:6px}
+
+  /* 6. 글자 수 */
+  .hero{text-align:center;padding:46px 0 40px}
+  .hero .big{font-family:"Noto Serif KR",serif;font-size:58px;line-height:1.15;color:var(--ink);letter-spacing:-.01em}
+  .hero .big small{font-size:26px;color:rgba(251,247,238,.55);margin-left:4px}
+  .hero .sub{font-size:14px;color:rgba(251,247,238,.6);margin-top:18px}
+  .hero .sub b{color:var(--gold);font-weight:500}
+
+  /* 8. 씨앗 카드 */
+  .seed{background:var(--card);border:1px solid var(--cardline);border-radius:3px;
+    padding:20px 22px;margin-bottom:12px}
+  .seed .mk{color:var(--gold);font-size:13px;margin-bottom:8px}
+  .seed p{font-family:"Noto Serif KR",serif;font-size:16.5px;line-height:1.85;margin:0 0 10px}
+  .seed .meta{font-size:11.5px;color:rgba(251,247,238,.42);letter-spacing:.04em}
+  .seed.more{border-style:dashed;text-align:center}
+  .seed.more p{font-size:14px;color:rgba(251,247,238,.55);margin:0}
+
+  /* 9. 칩 */
+  .chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
+  .chip{border:1px solid rgba(226,199,123,.42);border-radius:999px;padding:7px 15px;
+    font-size:13px;color:var(--gold);letter-spacing:.02em}
+
+  /* 10. 맺음 */
+  .close{border-top:1px solid var(--rule);padding:44px 0 30px;text-align:center}
+  .close p{font-family:"Noto Serif KR",serif;font-size:17px;line-height:2;margin:0 auto;max-width:580px;
+    color:rgba(251,247,238,.92)}
+  .fox{font-size:22px;margin-top:22px}
+
+  footer{padding:20px 0 56px;text-align:center;font-size:11px;
+    letter-spacing:.16em;color:rgba(251,247,238,.3)}
+
+  /* 별 깜빡임 */
+  @keyframes tw{0%,100%{opacity:.25}50%{opacity:1}}
+  @keyframes pulse{0%,100%{opacity:.5}50%{opacity:.95}}
+  .tw{animation:tw 4.2s ease-in-out infinite}
+  .halo{animation:pulse 5.4s ease-in-out infinite}
+  .daynum{font-family:"Noto Sans KR",sans-serif;font-size:8.5px;fill:#FBF7EE;opacity:.3}
+  .pname{font-family:"Noto Serif KR",serif;font-size:13.5px;fill:#E2C77B}
+  .bname{font-family:"Noto Sans KR",sans-serif;font-size:11px;fill:#FBF7EE;opacity:.72}
+  .lk{stroke:#E2C77B;stroke-width:1;opacity:.22}
+  svg text{text-anchor:middle}
+  svg [id^="d"] title{pointer-events:none}
+  g.star{cursor:default}
+
+  @media (max-width:480px){
+    h1{font-size:25px}
+    .axis{font-size:18px}
+    .hero .big{font-size:42px}
+    .strip{grid-template-columns:repeat(2,1fr);row-gap:20px}
+    .seed p{font-size:15.5px}
+    .close p{font-size:16px}
+  }
+</style>
+</head>
+<body>
+
+
+<div class="band"><img src="data:image/png;base64,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" alt="DEEPER"></div>
+
+<div class="wrap">
+
+  <header>
+    <div class="brow">DEEPER OS · 문법의 달 결산</div>
+    <h1 class="serif">수산나님이 건너온 사막</h1>
+    <div class="period">2026년 7월 2일 — 7월 26일 · 33일의 여정</div>
+  </header>
+
+  <!-- 3. 북극성 -->
+  <section>
+    <div class="label">나의 북극성 · 의미의 축</div>
+    <svg viewBox="0 0 640 120" width="640" role="img" aria-label="북극성 — 의미의 축">
+      <defs>
+        <path id="star" d="M0-10 Q2-2 10 0 Q2 2 0 10 Q-2 2 -10 0 Q-2-2 0-10Z" fill="#E2C77B"/>
+        <radialGradient id="halo"><stop offset="0%" stop-color="#E2C77B" stop-opacity=".55"/><stop offset="100%" stop-color="#E2C77B" stop-opacity="0"/></radialGradient>
+      </defs>
+      <circle cx="320" cy="66" r="30" fill="url(#halo)" class="halo"/>
+      <use href="#star" transform="translate(320,66) scale(1.2)"/>
+      <use href="#star" transform="translate(196,40) scale(0.3)" class="tw" style="animation-delay:.4s"/>
+      <use href="#star" transform="translate(452,52) scale(0.26)" class="tw" style="animation-delay:1.6s"/>
+      <use href="#star" transform="translate(410,96) scale(0.22)" class="tw" style="animation-delay:2.8s"/>
+      <use href="#star" transform="translate(238,98) scale(0.24)" class="tw" style="animation-delay:3.5s"/>
+    </svg>
+    <p class="axis">막다른 골목에서도 새 길은 나타난다는 걸<br>몸으로 안 사람으로,<br>같은 산 앞에 선 이의 곁이 된다.</p>
+  </section>
+
+  <!-- 4. 서른세 밤의 하늘 -->
+  <section>
+    <div class="label">서른세 밤의 하늘</div>
+    <svg id="sky" viewBox="0 0 640 280" width="640" role="img" aria-label="서른세 밤의 하늘 — Day 1부터 33까지"></svg>
+    <p class="starline">“어두움이 짙을수록 별은 더 빛이 난다.”<br><b>— DAY 33 ★별의 날</b></p>
+    <div class="cap">서른세 밤 가운데 33밤, 별이 떴습니다</div>
+  </section>
+
+  <!-- 5. 숫자 띠 -->
+  <div class="strip">
+    <div class="stat"><span class="n">33<small>/33</small></span><div class="t">걸은 날</div></div>
+    <div class="stat"><span class="n">140</span><div class="t">심은 씨앗</div></div>
+    <div class="stat"><span class="n">30</span><div class="t">오아시스</div></div>
+    <div class="stat"><span class="n">27</span><div class="t">냠냠</div></div>
+  </div>
+
+  <!-- 6. 글자 수 -->
+  <div class="hero">
+    <div class="big serif">39,364<small> 자</small></div>
+    <div class="sub">한 달 동안 손수 쓰신 글 — 원고지 <b>197매</b>가 되었습니다</div>
+  </div>
+
+  <!-- 7. 성도 -->
+  <section>
+    <div class="label">나의 성도 · 기둥과 가지</div>
+    <svg id="const" viewBox="0 0 640 340" width="640" role="img" aria-label="기둥 주제 성도"></svg>
+    <div class="cap">글이 모여 네 개의 기둥이 되었습니다 — 논리의 달에 이 기둥들이 구조가 됩니다</div>
+  </section>
+
+  <!-- 8. 씨앗 -->
+  <section>
+    <div class="label">가장 빛난 씨앗들</div>
+    <div class="seed">
+      <div class="mk">✦</div>
+      <p>막다른 골목에서 직접 배웠다 — 캄캄해도 새로운 길은 나타난다는 것. 그 모든 것을 하느님이 준비하고 계신다는 믿음이, 지금까지 나를 버텨준 힘이다.</p>
+      <div class="meta">2026-07-20 · 나</div>
+    </div>
+    <div class="seed">
+      <div class="mk">✦</div>
+      <p>승혜네 식탁이 나를 무장해제시켰듯, 이제 내 카운터가 누군가의 식탁이 된다.</p>
+      <div class="meta">2026-07-10 · 종합</div>
+    </div>
+    <div class="seed">
+      <div class="mk">✦</div>
+      <p>비교의 잣대는 모두 내가 만든 것 — 만든 손이 내 손이면, 눈금을 다시 긋는 것도 내 손이다.</p>
+      <div class="meta">2026-07-10 · 종합</div>
+    </div>
+    <div class="seed">
+      <div class="mk">✦</div>
+      <p>존재 그 자체로 평안이 되어주던 엄마 — 이제는 내가 그런 사람이 되어줄 차례라고 생각한다.</p>
+      <div class="meta">2026-07-18 · 나</div>
+    </div>
+    <div class="seed">
+      <div class="mk">✦</div>
+      <p>아무리 작고 사소한 일이라도 최선을 다하는 것 — 결과보다 그 과정이 더 값지다는 걸, 아들에게 물려주고 싶다.</p>
+      <div class="meta">2026-07-26 · 나</div>
+    </div>
+    <div class="seed more">
+      <p>… 그리고 135알의 씨앗이 더, 볼트에 심겨 있습니다</p>
+    </div>
+  </section>
+
+  <!-- 9. 자주 꺼낸 말 -->
+  <section>
+    <div class="label">이 사막에서 자주 꺼낸 말들</div>
+    <div class="chips">
+      <span class="chip">아들·충현</span>
+      <span class="chip">엄마</span>
+      <span class="chip">아버지</span>
+      <span class="chip">자리</span>
+      <span class="chip">약국</span>
+      <span class="chip">잣대</span>
+      <span class="chip">내려놓기</span>
+      <span class="chip">최선과 과정</span>
+    </div>
+  </section>
+
+  <!-- 10. 맺음 -->
+  <div class="close">
+    <p>Day 1에 “지금 이 순간에 온전히 잠겨” 있던 사람이,<br>
+    서른세 밤을 건너 “같은 산 앞에 선 이의 곁”에 서 있습니다.</p>
+    <p style="margin-top:20px">어두움이 짙을수록 별은 더 빛이 난다고 쓰신 그 문장은,<br>
+    수산나님이 이 사막에서 직접 켜신 빛입니다.</p>
+    <div class="fox">🦊</div>
+  </div>
+
+  <footer>DEEPER 언브랜딩 살롱 · 디퍼 OS · 문법 수료</footer>
+</div>
+
+<script>
+(function(){
+  var NS="http://www.w3.org/2000/svg";
+  function el(n,a){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function defs(svg){
+    var d=el("defs",{});
+    d.innerHTML='<path id="star2" d="M0-10 Q2-2 10 0 Q2 2 0 10 Q-2 2 -10 0 Q-2-2 0-10Z" fill="#E2C77B"/>'+
+      '<radialGradient id="halo2"><stop offset="0%" stop-color="#E2C77B" stop-opacity=".55"/><stop offset="100%" stop-color="#E2C77B" stop-opacity="0"/></radialGradient>';
+    svg.appendChild(d);
+  }
+
+  /* ---- 서른세 밤의 하늘 ---- */
+  var days=[
+   ["7월 3일","첫 문장 — “지금 이 순간에 온전히 잠겨, 정신없이 따라가고 있다.”"],
+   ["7월 3일","오늘의 나 — 가장 나답게 써졌던 날을 되짚었다."],
+   ["7월 3일","좋아서 하는 일 — 좋은 사람 앞에서는 돈을 생각하지 않는다."],
+   ["7월 6일","창조적 가치 — 아들은 내가 만든 생명체다."],
+   ["7월 6일","경험적 가치 — 무언가에 깊이 잠겼을 때, 몰랐던 나를 알게 되었다."],
+   ["7월 6일","태도적 가치 — 상황이 바뀐 것일 뿐, 나를 잃지 않으려 했다."],
+   ["7월 6일","손이 먼저 나간 일 — 먼저 나서는 편이 아니다. 늘 조심스럽다."],
+   ["7월 7일","자꾸 돌아오는 이야기 — 쳇바퀴에서 벗어난 짧은 여행들."],
+   ["7월 7일","★원천 길어올리기 ① — 아들이라는 보물, 몰입, 그리고 쉼."],
+   ["7월 7일","돌아오는 단어 — ‘아들’과 ‘욕심 내려놓기’."],
+   ["7월 8일","절대 안 쓰는 말 — 무례한 말을 싫어해서 쓰지 않으려 한다."],
+   ["7월 8일","목소리 — 확신에 차고 말에 힘이 있다고 느낄 때 커진다."],
+   ["7월 8일","먼저 지우는 것 — 앞뒤 맥락을 확인하고 중복된 말을 지운다."],
+   ["7월 9일","정말 나다운 한 줄 — “채워지지 않는 구멍은 바로 나 자신이었다.”"],
+   ["7월 10일","사람들이 묻는 것 — 의사에게 못 하는 사소한 이야기. 32년째 그 자리."],
+   ["7월 11일","★길어올리기 ② — “아직 부족하다고 되묻는 그 확인이, 32년을 지켜온 이유인지도.”"],
+   ["7월 12일","나만 갸웃하는 것 — 세상은 양끝을 오가고, 나는 적정선을 지키고 싶었다."],
+   ["7월 13일","아무도 말 안 하는 것 — 절대적으로 옳은 것은 없다. 나도 틀릴 수 있다."],
+   ["7월 14일","조용히 잘 해내는 것 — 사람들의 작은 디테일을 놓치지 않는다."],
+   ["7월 14일","겹쳐야 보이는 풍경 — 평균에 맞춘 약이 평균 밖의 사람에겐 독이 될 수 있다."],
+   ["7월 15일","닿길 바라는 마음 — 이 환자가 좋은 약으로 빨리 낫기를 바라는 마음. (↺ 7월 17일)"],
+   ["7월 18일","곁에서 편해진 사람 — 존재 그 자체로 평안이던 엄마. 이제 내 차례."],
+   ["7월 19일","★길어올리기 ③ — “세상은 같은 약을 짓지만, 나는 눈앞의 한 사람을 본다.”"],
+   ["7월 20일","직접 해보고 안 것 — 캄캄해도 새 길은 나타난다. 그 믿음이 버텨준 힘."],
+   ["7월 21일","생각이 뒤집힌 것 — 1+1이 0도, -1도 될 수 있는 것이 삶이더라."],
+   ["7월 22일","내 것이 아니었던 말 — “약사는 언제나 웃어야 한다”는 말."],
+   ["7월 23일","막힌 자리 — 방임과 지배 사이, 어느 쪽으로도 도망가지 않았다."],
+   ["7월 23일","넘어져 본 사람만 아는 것 — 넘어짐을 막는 게 아니라 다시 서는 데 방점이 있다."],
+   ["7월 24일","핵 모으기 — 석 주를 비워내고 남은 것: 희망과 믿음."],
+   ["7월 25일","★문법 완성 — “같은 산 앞에 선 이의 곁이 된다.” 의미의 축을 직접 골랐다."],
+   ["7월 25일","되읽기 — 스스로 밑줄: “어두움이 짙을수록 별은 더 빛이 난다.”"],
+   ["7월 26일","선물 — 아들에게: “결과보다 그 과정이 더 중요하다.”"],
+   ["7월 26일","★별의 날 — 이 달의 별 문장을 직접 골라 맨 위에 걸었다. 33곡 완창."]
+  ];
+  var sky=document.getElementById("sky");
+  defs(sky);
+  days.forEach(function(d,i){
+    var col=i%7, row=Math.floor(i/7);
+    var x=110+col*70, y=44+row*48;
+    var g=el("g",{"class":"star"});
+    var t=el("title",{});
+    t.textContent="Day "+(i+1)+" · "+d[0]+" — "+d[1];
+    g.appendChild(t);
+    g.appendChild(el("circle",{cx:x,cy:y,r:13,fill:"url(#halo2)"}));
+    var u=el("use",{href:"#star2",transform:"translate("+x+","+y+") scale(0.52)"});
+    if(i%3===1) {u.setAttribute("class","tw"); u.setAttribute("style","animation-delay:"+((i*0.37)%4.2).toFixed(2)+"s");}
+    g.appendChild(u);
+    var n=el("text",{x:x,y:y+24,"class":"daynum"});
+    n.textContent=(i+1);
+    g.appendChild(n);
+    sky.appendChild(g);
+  });
+
+  /* ---- 나의 성도 ---- */
+  var pillars=[
+   {x:110,y:110,name:"대물림",branches:[[100,40,"아버지의 그림자"],[40,150,"가지치기"],[170,158,"아들의 자리"]]},
+   {x:250,y:250,name:"약국의 자리",branches:[[175,215,"문턱 낮은 상담"],[215,308,"식탁이 된 카운터"],[335,240,"같은 약, 다른 삶"]]},
+   {x:415,y:105,name:"비움과 잣대",branches:[[415,35,"내려놓기"],[350,145,"자기신뢰"],[480,150,"적정선"]]},
+   {x:540,y:245,name:"막다른 골목과 산",branches:[[592,175,"넘어져도 다시"],[465,235,"캄캄해도 새 길"],[528,305,"같은 산 앞의 곁"]]}
+  ];
+  var cs=document.getElementById("const");
+  defs(cs);
+  pillars.forEach(function(p){
+    p.branches.forEach(function(b){
+      cs.appendChild(el("line",{x1:p.x,y1:p.y,x2:b[0],y2:b[1],"class":"lk"}));
+    });
+  });
+  pillars.forEach(function(p,pi){
+    p.branches.forEach(function(b,bi){
+      cs.appendChild(el("use",{href:"#star2",transform:"translate("+b[0]+","+b[1]+") scale(0.38)"}));
+      var bt=el("text",{x:b[0],y:b[1]+(b[1]<p.y?-13:19),"class":"bname"});
+      bt.textContent=b[2];
+      cs.appendChild(bt);
+    });
+    cs.appendChild(el("circle",{cx:p.x,cy:p.y,r:18,fill:"url(#halo2)","class":"halo",style:"animation-delay:"+(pi*1.1)+"s"}));
+    cs.appendChild(el("use",{href:"#star2",transform:"translate("+p.x+","+p.y+") scale(0.85)"}));
+    var pt=el("text",{x:p.x,y:p.y+40,"class":"pname"});
+    pt.textContent=p.name;
+    cs.appendChild(pt);
+  });
+})();
+</script>
+
+</body>
+</html>
