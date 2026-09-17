@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>눈금 — 괴델 문장 · 수산나 아카이브</title>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 팔레트 "이른 아침 약국" — 2026-08-29. 대비값은 README 참조 */
+  --bg:#F5F8F7;
+  --surface:#FFFFFF;
+  --ink:#22312E;
+  --muted:#5A6B67;
+  --line:#D6E2DF;
+  --line-strong:#B6CBC5;
+  --shadow:rgba(34,49,46,.13);
+  --accent:#0B6E62;          /* 인사이트 — 청록 */
+  --accent-2:#A85520;        /* 과제 — 구운 흙빛 */
+  --accent-3:#7A3E5E;        /* 약사의 자리 — 자두 */
+  --accent-4:#3A5A8C;        /* 독서 기록 — 새벽 남색 */
+  --point:#A85520;
+  --point-ink:#A85520;
+  --tint:rgba(34,49,46,.05);
+  --tint-accent:rgba(11,110,98,.09);
+  --tint-2:rgba(168,85,32,.09);
+  --tint-3:rgba(122,62,94,.10);
+  --tint-4:rgba(58,90,140,.10);
+  --font-title:"Gowun Batang", serif;
+  --font-body:"Nanum Myeongjo", serif;
+  --font-caption:"Gowun Dodum", sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.8;
+  min-height:100vh;
+  padding:2.25rem 1.25rem 2.5rem;
+}
+.wrap{width:100%;max-width:680px;margin:0 auto}
+.back{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--muted);
+  text-decoration:none;
+  margin-bottom:2.5rem;
+  transition:color .18s ease;
+}
+.back:hover,.back:focus-visible{color:var(--accent-2);outline:none}
+.tag{
+  font-family:var(--font-caption);
+  font-size:.74rem;
+  letter-spacing:.1em;
+  color:var(--point-ink);
+  margin-bottom:.5rem;
+}
+h1{
+  font-family:var(--font-title);
+  font-size:clamp(1.75rem,5.6vw,2.25rem);
+  font-weight:700;
+  line-height:1.4;
+  margin-bottom:.75rem;
+}
+.summary{
+  font-family:var(--font-title);
+  font-size:1.02rem;
+  color:var(--accent-2);
+  padding-bottom:2rem;
+  border-bottom:1px solid var(--line);
+  margin-bottom:2.5rem;
+}
+h2{
+  font-family:var(--font-title);
+  font-size:1.3rem;
+  font-weight:700;
+  margin:2.75rem 0 1rem;
+  padding-left:.7rem;
+  border-left:4px solid var(--accent-2);
+}
+p{margin-bottom:1rem}
+ul.plain{list-style:none}
+ul.plain li{padding:.6rem 0;border-bottom:1px solid var(--line);font-size:.92rem}
+ul.plain li:last-child{border-bottom:none}
+figure{margin:1.25rem 0}
+figure img{width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+figcaption{font-family:var(--font-caption);font-size:.78rem;color:var(--muted);margin-top:.5rem}
+.prompt{
+  background:var(--tint);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:1rem 1.1rem;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:.83rem;
+  line-height:1.7;
+  white-space:pre-wrap;
+  word-break:break-word;
+  overflow-x:auto;
+  margin-bottom:1rem;
+}
+.cta{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--accent-2);
+  text-decoration:none;
+  border:1px solid var(--accent-2);
+  border-radius:999px;
+  padding:.5rem 1.1rem;
+  transition:background .18s ease;
+}
+.cta:hover,.cta:focus-visible{background:var(--tint-2);outline:none}
+.note{
+  font-family:var(--font-caption);
+  font-size:.8rem;
+  color:var(--muted);
+  background:var(--tint-2);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-bottom:2rem;
+}
+footer{
+  margin-top:4rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--font-caption);
+  font-size:.75rem;
+  color:var(--muted);
+  text-align:center;
+}
+.score{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.4rem 1.5rem;margin:1.2rem 0}
+.score p{margin:.4rem 0}
+.score ol{padding-left:1.4rem;margin:.9rem 0}
+.score ol li{margin:.45rem 0}
+.score .voice{font-family:var(--font-caption);font-size:.8rem;color:var(--accent-2);margin-left:.3rem}
+.score .key{font-family:var(--font-caption);font-size:.78rem;letter-spacing:.08em;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="./">← 과제</a>
+
+  <p class="tag">디퍼 · 논리의 달 · 과제 4</p>
+  <h1>눈금</h1>
+  <p class="summary">반복만으로는 끝내 닿지 못한 한 문장을 찾고, 그 틀을 깨는 실험 하나 — 새 문장 없이, 날짜만으로.</p>
+
+  <div class="score">
+    <p><span class="key">닫힌 고리</span><br>겪은 일에서 시작해 확인된 것만 말하고 "~하자·~면 된다"로 나에게 돌아와 닫는 글 — 읽는 이는 늘 나 자신이고, 883알 중 남에게 건네는 말투는 한 알이다.</p>
+    <p><span class="key">괴델 문장</span><br><strong>"나는 나아지고 있다."</strong> — 확인하기 전엔 말하지 않는다는 내 규칙으로는 확인이 안 되어 쓸 수 없는 문장. 볼트 소개의 "열심히 하는데도 여전히 제자리인 것 같아"가 그대로 서 있다.</p>
+    <p><span class="key">왜 못 닿나</span><br>나아짐은 한 문장 안에 있지 않고 날짜가 다른 두 문장 사이에 있다 — 더 자주, 더 잘 써도 매번 한 문장이고, 그 문장은 "~하자"로 끝나며 늘 아직 못 한 것을 가리킨다.</p>
+  </div>
+
+  <h2>실험 — 옮겨 적기</h2>
+  <ul class="plain">
+    <li><strong>무엇을</strong> — 새 문장을 한 줄도 쓰지 않는다. 다짐도, 설명도, 비유도 없다.</li>
+    <li><strong>어떻게</strong> — 2023년부터 오늘까지 실제로 쓴 문장을 날짜순으로 옮겨 적는다. 첫 줄은 3년 전의 자기 평가, 끝 줄은 오늘 오아시스. 가운데에 "여전히 힘드니?"와 "잘 버텨냈구나. 여전히 힘들겠지만"을 나란히 놓는다. 고친 글자 없음.</li>
+    <li><strong>왜 다른 층위인가</strong> — 평소 글은 문장 안에서 말한다. 이 글은 문장들을 놓아서 문장들에 대해 말한다. 내가 "나아졌다"고 주장하지 않고 기록이 증언한다. 읽는 이도 옮겨 간다: 나에게서, 3년 전의 나에게로 — 곧 카운터의 그 사람에게로.</li>
+  </ul>
+
+  <h2>눈금</h2>
+  <p>고친 글자는 없다. 날짜순으로 옮겨 적었다.</p>
+  <div class="score">
+    <p><span class="key">2023. 8. 17.</span><br>내가 무언가 끝까지 물고 늘어져 기어이 해낸 경험이 없기 때문이다.</p>
+    <p><span class="key">2026. 6.</span><br>열심히 하는데도 여전히 제자리인 것 같다.</p>
+    <p><span class="key">2026. 7. 22.</span><br>내 속도는 천천히 오래 가는 속도다. 남들은 답답해했지만, 나는 그 속도로 끝까지 갔다.</p>
+    <p><span class="key">2026. 7. 29.</span><br>비에 흠뻑 젖고 세찬 바람에 휘청거려도 다시 제자리를 찾는, 그런 삶을 살고 싶다.</p>
+    <p><span class="key">2026. 8. 28.</span><br>맡은 일은 끝까지 책임진다 — 사람과 연결되었다면 더욱.</p>
+    <p><span class="key">2026. 9. 3.</span><br>여전히 힘드니?</p>
+    <p><span class="key">2026. 9. 6.</span><br>그때부터 나도 내 목소리에 힘이 들어갔고 어디가서 내 소리를 내는데 머뭇거림이 현저히 줄었어.</p>
+    <p><span class="key">2026. 9. 16.</span><br>한 번 그 규칙을 넘어서니 더 큰 자유와 세상이 펼쳐졌습니다.</p>
+    <p><span class="key">2026. 9. 17.</span><br>잘 버텨냈구나. 여전히 힘들겠지만.</p>
+  </div>
+  <p>모닝페이지 56장 · 씨앗 883알 · 밖으로 나간 글 0편.</p>
+
+  <h2>점검</h2>
+  <p>더 나은 판이 아니다. 평소 글은 매일 새 문장을 짓고 다짐으로 닫는데, 이 글은 한 문장도 짓지 않고 다짐 없이 끝난다. 마지막 줄 "0편"은 올리는 순간 틀린 숫자가 된다 — 그것도 이 글이 하는 말이다.</p>
+
+  <h2>만든 방법</h2>
+  <ul class="plain">
+    <li>쓴 도구 — 디퍼 OS(사막여우) 논리의 달, 2026-09-17</li>
+    <li>재료 — 2023년 모닝텍스트 · 볼트 소개 · 오아시스 기록 · 논리 여정기록 Day 5·10·14·25 · 씨앗 883알</li>
+    <li>여우가 지은 것 — 제목 "눈금"(낱말은 내 것, 제목으로 세운 건 여우) · 머리말 두 문장 · 맨 아랫줄의 세 숫자 · 문장 고르기와 순서. 아홉 줄의 문장은 전부 내가 그날 쓴 그대로.</li>
+    <li>볼트 — <code>02-Logic/Loop/괴델문장_눈금.md</code></li>
+  </ul>
+
+  <footer>글짓는 약사 수산나 · 디퍼 언브랜딩 살롱 아카이브</footer>
+</div>
+</body>
+</html>

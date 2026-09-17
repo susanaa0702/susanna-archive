@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>열 번에 한 번 — 발행 고리 · 수산나 아카이브</title>
+<link rel="icon" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 팔레트 "이른 아침 약국" — 2026-08-29. 대비값은 README 참조 */
+  --bg:#F5F8F7;
+  --surface:#FFFFFF;
+  --ink:#22312E;
+  --muted:#5A6B67;
+  --line:#D6E2DF;
+  --line-strong:#B6CBC5;
+  --shadow:rgba(34,49,46,.13);
+  --accent:#0B6E62;          /* 인사이트 — 청록 */
+  --accent-2:#A85520;        /* 과제 — 구운 흙빛 */
+  --accent-3:#7A3E5E;        /* 약사의 자리 — 자두 */
+  --accent-4:#3A5A8C;        /* 독서 기록 — 새벽 남색 */
+  --point:#A85520;
+  --point-ink:#A85520;
+  --tint:rgba(34,49,46,.05);
+  --tint-accent:rgba(11,110,98,.09);
+  --tint-2:rgba(168,85,32,.09);
+  --tint-3:rgba(122,62,94,.10);
+  --tint-4:rgba(58,90,140,.10);
+  --font-title:"Gowun Batang", serif;
+  --font-body:"Nanum Myeongjo", serif;
+  --font-caption:"Gowun Dodum", sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.8;
+  min-height:100vh;
+  padding:2.25rem 1.25rem 2.5rem;
+}
+.wrap{width:100%;max-width:680px;margin:0 auto}
+.back{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--muted);
+  text-decoration:none;
+  margin-bottom:2.5rem;
+  transition:color .18s ease;
+}
+.back:hover,.back:focus-visible{color:var(--accent-2);outline:none}
+.tag{
+  font-family:var(--font-caption);
+  font-size:.74rem;
+  letter-spacing:.1em;
+  color:var(--point-ink);
+  margin-bottom:.5rem;
+}
+h1{
+  font-family:var(--font-title);
+  font-size:clamp(1.75rem,5.6vw,2.25rem);
+  font-weight:700;
+  line-height:1.4;
+  margin-bottom:.75rem;
+}
+.summary{
+  font-family:var(--font-title);
+  font-size:1.02rem;
+  color:var(--accent-2);
+  padding-bottom:2rem;
+  border-bottom:1px solid var(--line);
+  margin-bottom:2.5rem;
+}
+h2{
+  font-family:var(--font-title);
+  font-size:1.3rem;
+  font-weight:700;
+  margin:2.75rem 0 1rem;
+  padding-left:.7rem;
+  border-left:4px solid var(--accent-2);
+}
+p{margin-bottom:1rem}
+ul.plain{list-style:none}
+ul.plain li{padding:.6rem 0;border-bottom:1px solid var(--line);font-size:.92rem}
+ul.plain li:last-child{border-bottom:none}
+figure{margin:1.25rem 0}
+figure img{width:100%;max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+figcaption{font-family:var(--font-caption);font-size:.78rem;color:var(--muted);margin-top:.5rem}
+.prompt{
+  background:var(--tint);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:1rem 1.1rem;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:.83rem;
+  line-height:1.7;
+  white-space:pre-wrap;
+  word-break:break-word;
+  overflow-x:auto;
+  margin-bottom:1rem;
+}
+.cta{
+  display:inline-block;
+  font-family:var(--font-caption);
+  font-size:.85rem;
+  color:var(--accent-2);
+  text-decoration:none;
+  border:1px solid var(--accent-2);
+  border-radius:999px;
+  padding:.5rem 1.1rem;
+  transition:background .18s ease;
+}
+.cta:hover,.cta:focus-visible{background:var(--tint-2);outline:none}
+.note{
+  font-family:var(--font-caption);
+  font-size:.8rem;
+  color:var(--muted);
+  background:var(--tint-2);
+  border-radius:10px;
+  padding:.9rem 1.1rem;
+  margin-bottom:2rem;
+}
+footer{
+  margin-top:4rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-family:var(--font-caption);
+  font-size:.75rem;
+  color:var(--muted);
+  text-align:center;
+}
+.score{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.4rem 1.5rem;margin:1.2rem 0}
+.score p{margin:.4rem 0}
+.score ol{padding-left:1.4rem;margin:.9rem 0}
+.score ol li{margin:.45rem 0}
+.score .voice{font-family:var(--font-caption);font-size:.8rem;color:var(--accent-2);margin-left:.3rem}
+.score .key{font-family:var(--font-caption);font-size:.78rem;letter-spacing:.08em;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="./">← 과제</a>
+
+  <p class="tag">디퍼 · 논리의 달 · 과제 3</p>
+  <h1>열 번에 한 번</h1>
+  <p class="summary">오늘 강의실에 올릴 한 편과, 내일 다음 편을 같은 방식으로 뽑을 다섯 줄의 고리.</p>
+
+  <div class="score">
+    <p><span class="key">불변량</span><br>겪은 것과 확인된 것만 말한다: 「좋아졌다」면 「좋아졌다」로, 모르면 모른다고.</p>
+    <p><span class="key">그 사람의 물음</span><br>나는 나아지고 있는가.</p>
+  </div>
+
+  <h2>한 편</h2>
+  <p>같은 자리에서 33년, 약을 건네며 먼저 묻는 말은 하나였다. "어디가 불편하세요?" 그런데 이 말을 아무에게나 꺼내지는 않았다. 먼저 물어보기 전에 지레짐작으로 사람을 판단해서, 내 말이 통할 것 같은 사람에게만 적극적으로 상담을 했다. 기가 세 보이면 약만 건넸다. 괜히 말 꺼냈다가 거절당하면 자신감만 잃을까 봐.</p>
+  <p>7월 28일 아침 손글씨에 이렇게 적혀 있다. "10번 시도에 한번도 대단한데 어제는 2번의 시도가 있었고 그중 한번이 쉽게 되었다." 오늘 다시 읽다가 알았다 — 그날 내가 센 것은 성사가 아니라 시도였다. 거절당한 한 번도 시도 한 번으로 적혀 있다. 적히지 않은 날은 하나뿐이다. 짐작하고 물러난 날.</p>
+  <p>짐작에는 눈금이 없다.</p>
+  <p>잃는 건 그 사람이 아니라 내 상담의 기회였다. 그러니 통할 것 같은 사람에게만이 아니라 안 통할 것 같은 사람에게도 같은 말을 건네자. 확인된 데까지만 말하고, 모르면 모른다고 하자. 퇴근 전에 한 줄 적자 — 받았는지, 거절했는지, 모른다고 했는지. 열 번에 한 번이면 된다.</p>
+  <p class="note">강의실 나눔 · 524자</p>
+
+  <h2>게의 귀로 깎은 자리</h2>
+  <ul class="plain">
+    <li><s>"그날은 열 번에 한 번이 아니라 영 번에 영 번이다."</s> — 기교. 내 글에 없는 말장난.</li>
+    <li><s>"카운터에 33년을 서 있었다."</s> — 설명. "같은 자리에서 33년"으로 바꿈.</li>
+    <li><s>"짐작하지 않는 사람이 되는 셈이다."</s> — 매끄러운 마무리. "~하자"로 닫음.</li>
+    <li><s>"이것이 내 상담 기록 100건의 첫 줄이 될 것이다."</s> — 예고. 글이 발견을 넘어감.</li>
+  </ul>
+  <div class="score">
+    <p><span class="key">남기는 것</span><br>내가 직접 쓴 낱말과 날짜가 있는 장면, 그리고 "~하자"·"~면 된다"로 끝나는 문장.</p>
+    <p><span class="key">버리는 것</span><br>여우가 이은 연결, 한 번 놓은 비유를 다시 푸는 문장, 앞으로를 예고하는 마무리.</p>
+  </div>
+
+  <h2>고리 다섯 줄</h2>
+  <div class="score">
+    <p><span class="key">언제, 무엇 뒤에</span><br>아침, 모닝페이지 한 장을 냠냠으로 들인 바로 뒤. 20분.</p>
+    <ol>
+      <li><strong>적는다</strong> — 카운터에 올 그 사람의 물음 하나를 데일리노트 맨 위에 한 줄. ("나는 나아지고 있는가" / "맞게 왔나" 중 하나.) 1분.</li>
+      <li><strong>찾는다</strong> — 방금 들인 손글씨와 어제 씨앗에서, 그 물음에 겪은 것으로 답한 문장 하나를 그대로 옮긴다. 한 문장. 4분.</li>
+      <li><strong>짓는다</strong> — 그 문장 하나로 500자. 장면 하나(날짜 있는 것)·비유 하나·"~하자"로 끝. 짐작한 말은 지운다. 12분.</li>
+      <li><strong>올린다</strong> — 강의실에 그대로. 고치지 않고. 틀리고 맞고가 없는 자리에 먼저. 1분.</li>
+      <li><strong>읽어 준다</strong> — 그날 카운터에서 "어디가 불편하세요?" 다음에, 그 글의 한 줄을 한 사람에게 소리 내어 건넨다. 퇴근 전 상담기록 한 줄, 「돈 날」 한 줄. 2분.</li>
+    </ol>
+    <p><span class="key">먼저 사라질 낱말</span><br><strong>시도.</strong> 고리가 멈추면 세는 것이 성사와 매출로 되돌아가고, "10번 시도에 한번"의 그 낱말이 제일 먼저 글에서 빠진다.</p>
+    <p><span class="key">닿은 흔적</span><br>아직 없음.</p>
+    <p><span class="key">돈 날</span><br>2026-09-17</p>
+  </div>
+
+  <h2>만든 방법</h2>
+  <ul class="plain">
+    <li>쓴 도구 — 디퍼 OS(사막여우) 논리의 달, 2026-09-17</li>
+    <li>재료 — 9월의 데일리노트 · 냠냠(모닝페이지 29일차의 한 줄) · 씨앗 883알 · 논리 여정기록 Day 1~26 · 악보 정본 · 이상적 독자 · 워크플로우 루프 · 수산나체 정의서</li>
+    <li>주제와 불변량은 지난주 악보 그대로. 장면은 7월 28일 손글씨에서 그대로. 여우가 지은 것은 제목(원문 "10번 시도에 한번"을 줄임)과 "짐작에는 눈금이 없다" 한 줄, 고리의 다섯 동사.</li>
+    <li>볼트에서는 <code>02-Logic/Loop/워크플로우루프.md</code> 아래에 이어 적어, 고리를 돌릴 때마다 「돈 날」에 한 줄씩 더한다.</li>
+  </ul>
+
+  <footer>글짓는 약사 수산나 · 디퍼 언브랜딩 살롱 아카이브</footer>
+</div>
+</body>
+</html>
